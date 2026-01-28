@@ -1,0 +1,20 @@
+{
+  "name": "apf",
+  "version": "1.0.0",
+  "description": "Avanz of the proyect final",
+  "homepage": "https://github.com/CikiUmi/Avance-de-proyecto#readme",
+  "bugs": {
+    "url": "https://github.com/CikiUmi/Avance-de-proyecto/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CikiUmi/Avance-de-proyecto.git"
+  },
+  "license": "ISC",
+  "author": "Equipo 1",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
