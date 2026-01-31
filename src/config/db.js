@@ -1,4 +1,6 @@
 /* Conexión a MongoDB usando variable de .env */
+require('dotenv').config();
+const MONGO_URI = process.env.MONGO_URI;
 
 const mongoose = require('mongoose');
 
