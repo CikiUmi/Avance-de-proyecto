@@ -9,15 +9,15 @@ dotenv.config(); /* agarra variables de .env */
 const app = express(); 
 const PORT = process.env.PORT;
 
+// Servidor :D
+app.get('/', (req, res) => {
+  res.send('Servidor sencillo con express y node :DD!');
+});
+
 // Middlewares y conexión
 app.use(cors()); /* peticiones de dominios */
 app.use(express.json()); /* para leer json */
 connectDB();
-
-// Ruta base
-app.get('/', (req, res) => {
-  res.send('Servidor funcionando');
-});
 
 // Arrancar servidor
 app.listen(PORT, () => {
