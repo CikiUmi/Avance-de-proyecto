@@ -3,12 +3,12 @@ Equipo 1 - Sr Lucxs Studio
 
 El proyecto está dividido en carpetas:
 
-**node_modules**
+**node_modules:**
 librerías y dependencias instaladas para el proyecto. 
 
 - - - - - - - - - - - - - - - - - - - - - 
 
-**public**
+**public:**
 Frontend de la página. Estructuras, estilos, etc.
 
 *** = app = ***
@@ -23,8 +23,8 @@ estructura del sitio web en formato .html.
 - - - - - - - - - - - - - - - - - - - - - 
 
 
-**Src**
-Backend y lógica de la página. Base de datos, conexiones y configuraciones.
+**Src:**
+Backend y lógica de la página. Base de datos, conexiones y configuraciones. server.js
 
 *** = config = ***
 Configuración de la base de datos (Mongo)
