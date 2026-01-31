@@ -1,20 +1,18 @@
-/* Conexión a MongoDB usando variable de .env */
-
+/* Fragmento de código extraído de MongoAtlas */
 const mongoose = require('mongoose');
 
-const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true } };
-
-async function run() {
+const connectDB = async () => { /* nombre de función */
   try {
     // Create a Mongoose client with a MongoClientOptions object to set the Stable API version
-    await mongoose.connect(MONGO_URI, clientOptions);
-    await mongoose.connection.db.admin().command({ ping: 1 });
-    console.log("¡Conexión exitosa a MongoDB!");
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await mongoose.disconnect();
-  }
-}
-run().catch(console.dir);
+    /* Conexión a MongoDB usando variable de .env */
 
-/* Fragmento de código extraído de MongoAtlas */
+    await mongoose.connect(process.env.MONGO_URI); /* obtenido de MongoAtlas */
+    console.log("¡Conexión exitosa a MongoDB!");
+  } catch (error) {
+    // Por si algo ocurre
+    console.error('Error al conectar a MongoDB:', error.message);
+    process.exit(1); /* Cierra si hay algo mal */
+  }
+};
+
+module.exports = { connectDB }; /* Para poder importarla en otros lugare */
