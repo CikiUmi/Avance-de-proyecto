@@ -19,7 +19,17 @@ app.use(cors()); /* peticiones de dominios */
 app.use(express.json()); /* para leer json */
 connectDB();
 
+// Rutas
+app.use('/api/auth', authRoutes);
+
+// Ejemplo de ruta protegida
+app.get('/api/protected', authMiddleware, (req, res) => {
+  res.json({ message: 'Access granted to protected route', userId: req.user.id });
+});
+
+
 // Arrancar servidor
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en http://localhost:${PORT}`);
 });
+
