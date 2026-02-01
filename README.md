@@ -1,5 +1,8 @@
 # Avance-de-proyecto
 Equipo 1 - Sr Lucxs Studio 
+ - MHQ
+ - JMDR
+ - DHH
 - - - - - - - - - - - - - - - - - - - - - 
 - - - - - - - - - - - - - - - - - - - - - 
 
