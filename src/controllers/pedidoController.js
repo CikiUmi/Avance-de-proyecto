@@ -22,7 +22,7 @@ exports.getAllPedidos = async (req, res) => {
   }
 };
 
-/* Uno */
+/* Unooooo */
 exports.getPedido = async (req, res) => {
   try {
     const { id } = req.params;
