@@ -1,0 +1,1 @@
+const Catalogo = require('../models/Catalogo.js');

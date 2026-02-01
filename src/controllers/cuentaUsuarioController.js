@@ -1,0 +1,1 @@
+const CuentaUsuario = require('../models/CuentaUsuario.js');
