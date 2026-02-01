@@ -1,12 +1,81 @@
 const Pedido = require('../models/Pedido');
 
 // CREAR
-// READ
-// UPDATE
-// DELETE
+exports.createPedido = async (req, res) => {
+  try {
+    const nuevoPedido = new Pedido(req.body);
+    const pedidoGuardado = await nuevoPedido.save();
+    res.status(201).json(pedidoGuardado);
+  } catch (error) {
+    res.status(400).json({ mensaje: 'Error al guardar pedido: ', error });
+  }
+};
 
-  createPedido,
-  updatePedido,
-  getPedido,
-  getAllPedidos,
-  deletePedido
+// READ
+/* Todos */
+exports.getAllPedidos = async (req, res) => {
+  try {
+    const allPedidos = await Pedido.find();
+    res.status(201).json(allPedidos);
+  } catch (error) {
+    res.status(400).json({ mensaje: 'Error al obtener pedidos: ', error });
+  }
+};
+
+/* Unooooo */
+exports.getPedido = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const pedido = await Pedido.findById(id);
+        if (!pedido) {
+      return res.status(404).json({ mensaje: 'Pedido no encontrado' });
+    }
+
+    res.status(200).json(pedido);
+  } catch (error) {
+    res.status(400).json({
+      mensaje: 'Error al obtener pedido',
+      error
+    });
+  }
+};
+
+// UPDATE
+exports.updatePedido = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const pedidoActualizar = await Pedido.findByIdAndUpdate(id, req.body, {new:true, runValidators: true });
+        if (!pedidoActualizar) {
+      return res.status(404).json({ mensaje: 'Pedido no encontrado' });
+    }
+
+    res.status(200).json(pedidoActualizar);
+  } catch (error) {
+    res.status(400).json({
+      mensaje: 'Error al actualizar pedido',
+      error
+    });
+  }
+};
+
+// DELETE
+exports.deletePedido = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const pedidoEliminado = await Pedido.findByIdAndDelete(id);
+    if (!pedidoEliminado) {
+      return res.status(404).json({ mensaje: 'Pedido no encontrado' });
+    }
+
+    res.status(200).json({ mensaje: 'Pedido eliminado correctamente' });
+  } catch (error) {
+    res.status(400).json({
+      mensaje: 'Error al eliminar pedido',
+      error
+    });
+  }
+};
+
+
+  
