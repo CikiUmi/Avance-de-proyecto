@@ -8,14 +8,11 @@ exports.crearProducto = async (req, res) => {
     res.status(201).json(productoGuardado);
   } catch (error) {
     res.status(400).json({ mensaje: 'Error al añadir producto al catálogo: ', error });
-  }
+  }ta
 }
 
 // READ
 /* Todos */
-
-
-// Leer todos los productos
 exports.getCatalogo = async (req, res) => {
   try {
      const catalogoProductos = await Catalogo.find();
@@ -41,3 +38,11 @@ exports.getProducto = async (req, res) => {
 
 
 // DELETE
+
+
+
+  createProducto,
+  getCatalogo,
+  getProducto,
+  updateProducto,
+  deleteProducto

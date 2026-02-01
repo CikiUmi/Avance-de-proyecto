@@ -7,11 +7,11 @@ const {
   getCarrito,
   updateCarrito,
   deleteCarrito
-} = require('../controllers/catalogoController');
+} = require('../controllers/carritoController');
 
 router.post('/', createCarrito);   /* Crear */
 router.put('/:userID/add', updateProductosCarrito);     /* Añadir producto al carrito */
-router.get('/:userID', getCarrito);      /* Leer uno */
+router.get('/:userID/', getCarrito);      /* Leer uno */
 router.put('/:userID/update', updateCarrito);      /* Actualizar */
 router.delete('/:userID/delete', deleteCarrito);      /* Eliminar uno */
 
