@@ -1,5 +1,12 @@
 # Avance-de-proyecto
-Equipo 1 - Sr Lucxs Studio 
+**Equipo 1 - Sr Lucxs Studio** 
+ - MHQ
+ - JMDR
+ - DHH
+
+Este proyecto es una tienda en línea de ropa, una página web desarrollada con Node.js, Express y MongoDB. En la carpeta de 'entregables' hay una demostración de cómo funciona la página cuando las variables de ambiente tienen los datos necesarios.
+- - - - - - - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - - - 
 
 El proyecto está dividido en carpetas:
 
@@ -11,13 +18,13 @@ librerías y dependencias instaladas para el proyecto.
 **public:**
 Frontend de la página. Estructuras, estilos, etc.
 
-*** = app = ***
+***= app =***
 archivos .js para las páginas.
 
-*** = pages = ***
+***= pages =***
 estructura del sitio web en formato .html.
 
-*** = styles = ***
+***= styles =***
 .css para la página.
 
 - - - - - - - - - - - - - - - - - - - - - 
@@ -26,19 +33,19 @@ estructura del sitio web en formato .html.
 **Src:**
 Backend y lógica de la página. Base de datos, conexiones y configuraciones. server.js
 
-*** = config = ***
+***= config =***
 Configuración de la base de datos (Mongo)
 
-*** = controllers = ***
+***= controllers =***
 CRUD de la base de datos.
 
-*** = models = ***
+***= models =***
 Schemas (DB).
 
-*** = routes = ***
+***= routes =***
 Rutas de API.
 
-*** = middlewares = ***
+***= middlewares =***
 Jsonwebtoken, rutas protegidas.
 
 - - - - - - - - - - - - - - - - - - - - - 
