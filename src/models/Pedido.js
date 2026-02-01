@@ -6,12 +6,11 @@ const pedidoSchema = new mongoose.Schema({
     ref: 'CuentaUsuario',               // id de usuario
     required: true
   },
-
   productos: [
     {
       producto: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Catalogo',        // referencia a la colección products
+        ref: 'Catalogo',        // id de producto
         required: true
       },
       cantidad: {
@@ -53,14 +52,16 @@ const pedidoSchema = new mongoose.Schema({
   estado: {
     type: String,
     enum: ['en proceso','entregado','cancelado'],
-    default: 'en proceso'
+    default: 'en proceso',
+    required: true
   },
 
   fecha: {
     type: Date,
-    default: Date.now
+    default: Date.now,
+    required: true
   }
 });
 
 
-module.exports = mongoose.model('Pedido', productSchema);
+module.exports = mongoose.model('Pedido', pedidoSchema);

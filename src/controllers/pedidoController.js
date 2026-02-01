@@ -1,0 +1,1 @@
+const Pedido = require('../models/Pedido.js');
