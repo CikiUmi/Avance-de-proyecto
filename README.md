@@ -4,7 +4,7 @@
  - JMDR
  - DHH
 
-Este proyecto es una tienda en línea de ropa, una página web desarrollada con Node.js, Express y MongoDB
+Este proyecto es una tienda en línea de ropa, una página web desarrollada con Node.js, Express y MongoDB. En la carpeta de 'entregables' hay una demostración de cómo funciona la página cuando las variables de ambiente tienen los datos necesarios.
 - - - - - - - - - - - - - - - - - - - - - 
 - - - - - - - - - - - - - - - - - - - - - 
 
