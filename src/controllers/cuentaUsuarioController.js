@@ -1,1 +1,1 @@
-const CuentaUsuario = require('../models/CuentaUsuario.js');
+const CuentaUsuario = require('../models/CuentaUsuario');

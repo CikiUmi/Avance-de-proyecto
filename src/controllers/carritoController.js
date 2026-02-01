@@ -1,1 +1,1 @@
-const Carrito = require('../models/Carrito.js');
+const Carrito = require('../models/Carrito');

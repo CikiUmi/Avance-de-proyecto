@@ -1,1 +1,1 @@
-const Pedido = require('../models/Pedido.js');
+const Pedido = require('../models/Pedido');
