@@ -1,8 +1,10 @@
 # Avance-de-proyecto
-Equipo 1 - Sr Lucxs Studio 
+**Equipo 1 - Sr Lucxs Studio** 
  - MHQ
  - JMDR
  - DHH
+
+Este proyecto es una tienda en línea de ropa, una página web desarrollada con Node.js, Express y MongoDB
 - - - - - - - - - - - - - - - - - - - - - 
 - - - - - - - - - - - - - - - - - - - - - 
 
