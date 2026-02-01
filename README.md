@@ -1,5 +1,7 @@
 # Avance-de-proyecto
 Equipo 1 - Sr Lucxs Studio 
+- - - - - - - - - - - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - - - 
 
 El proyecto está dividido en carpetas:
 
