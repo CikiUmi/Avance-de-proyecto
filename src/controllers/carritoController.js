@@ -1,1 +1,12 @@
-const Carrito = require('../models/Carrito.js');
+const Carrito = require('../models/Carrito');
+
+// CREAR
+// READ
+// UPDATE
+// DELETE
+
+  createCarrito,
+  updateProductosCarrito,
+  getCarrito,
+  updateCarrito,
+  deleteCarrito
