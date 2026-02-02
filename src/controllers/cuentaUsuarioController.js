@@ -1,7 +1,5 @@
 const CuentaUsuario = require('../models/CuentaUsuario');
-
-const CuentaUsuario = require('../models/CuentaUsuario');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 
 // ======================

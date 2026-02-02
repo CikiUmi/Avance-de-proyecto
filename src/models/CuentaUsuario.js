@@ -9,7 +9,7 @@ const cuentaUsuarioSchema = new mongoose.Schema({
     maxlength: 50
 
   },
-  email: {
+  correo: {
     type: String,
     /* Regex para revisar que sea un correo  */
     match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/],
@@ -31,9 +31,8 @@ const cuentaUsuarioSchema = new mongoose.Schema({
   rol: {
     type: String,
     required: true,
-    enum: ['cliente', 'empleado', 'admin'],
-    default: 'cliente',
-  },
+    enum: ['cliente', 'empleado', 'admin']
+    },
   direccion: [
     {
       calle: {

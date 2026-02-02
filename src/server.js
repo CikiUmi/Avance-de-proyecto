@@ -1,58 +1,36 @@
-// por el package.json y el tipo (commonjs), se usan require y module.export en vez de import from y export
+const dotenv = require('dotenv');
+const express = require('express');
+const cors = require('cors');
+const path = require('path');
+const { connectDB } = require('./config/db');
 
-
-const dotenv = require('dotenv'); /* Variables */
-const express = require('express'); /* Framework */
-const cors = require('cors'); /* peticiones */
-const { connectDB } = require('./config/db') /* función para acceder a mongo */
-
-
-const authRoutes = require('./routes/authRoutes');
-const authMiddleware = require('./middleware/auth');
-
-
-dotenv.config(); /* agarra variables de .env */
+dotenv.config();
 const app = express();
 const PORT = process.env.PORT;
 
+// Middlewares
+app.use(cors());
+app.use(express.json());
 
-// Rutas
-app.use('/api/auth', authRoutes);
-
-// Ejemplo de ruta protegida
-app.get('/api/protected', authMiddleware, (req, res) => {
-  res.json({ message: 'Access granted to protected route', userId: req.user.id });
-});
-
-
-
-
-
-// Servidor :D
-app.get('/', (req, res) => {
-  res.send('Servidor sencillo con express y node :DD!');
-});
-
-
-// Middlewares y conexión
-app.use(cors()); /* peticiones de dominios */
-app.use(express.json()); /* para leer json */
+// Conectar DB
 connectDB();
 
+// Rutas existentes
+app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/catalogo', require('./routes/catalogoRoutes'));
+app.use('/api/pedido', require('./routes/pedidoRoutes'));
+app.use('/api/cuentaUsuario', require('./routes/cuentaUsuarioRoutes'));
+app.use('/api/carrito', require('./routes/carritoRoutes'));
+const authMiddleware = require('./middleware/auth');
 
-// Rutas
-app.use('/api/auth', authRoutes);
+// Servir archivos estáticos de public/
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
-
-// Ejemplo de ruta protegida
-app.get('/api/protected', authMiddleware, (req, res) => {
-  res.json({ message: 'Access granted to protected route', userId: req.user.id });
+// Ruta raíz -> página de login
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'pages', 'index.html'));
 });
 
-
-
-
-// Arrancar servidor
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en http://localhost:${PORT}`);
 });

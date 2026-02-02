@@ -1,7 +1,7 @@
 const Catalogo = require('../models/Catalogo');
 
 // CREAR
-exports.crearProducto = async (req, res) => {
+exports.createProducto = async (req, res) => {
   try {
     const nuevoProducto = new Catalogo(req.body);
     const productoGuardado = await nuevoProducto.save();

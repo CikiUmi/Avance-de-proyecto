@@ -1,3 +1,5 @@
+const Carrito = require('../models/Carrito');
+
 // ======================
 // CREAR
 // ======================
