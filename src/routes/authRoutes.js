@@ -51,11 +51,16 @@ router.post('/login', async (req, res) => {
 
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) return res.status(401).json({ message: 'Credenciales inválidas' });
+    
+    /* Para actualizar el lastLogin */
+    user.lastLogin = new Date();
+    await user.save();
 
+  
     const token = generateToken(user);
     res.json({
       message: 'Autenticado',
-      user: { id: user._id, nombre: user.nombre, correo: user.correo },
+      user: { id: user._id, nombre: user.nombre, correo: user.correo, rol: user.rol },
       token,
     });
   } catch (err) {
