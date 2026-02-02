@@ -1,7 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const Cuenta = require('../models/CuentaUsuario');
+const CuentaUsuario = require('../models/CuentaUsuario');
 
 const router = express.Router();
 
@@ -15,7 +15,7 @@ const generateToken = (user) => {
 // POST /api/auth/register
 router.post('/register', async (req, res) => {
   try {
-    const { nombre, correo, password } = req.body;
+    const { nombre, correo, password, rol } = req.body;
     if (!correo || !password) return res.status(400).json({ message: 'Se necesita correo y contraseña' });
 
     const existing = await CuentaUsuario.findOne({ correo });
@@ -24,7 +24,7 @@ router.post('/register', async (req, res) => {
     const salt = await bcrypt.genSalt(10); //caracteres random
     const hashed = await bcrypt.hash(password, salt);
 
-    const user = await CuentaUsuario.create({ nombre, correo, password: hashed });
+    const user = await CuentaUsuario.create({ nombre, correo, password: hashed, rol });
 
     const token = generateToken(user);
     res.status(201).json({
@@ -43,10 +43,10 @@ router.post('/register', async (req, res) => {
 // POST /api/auth/login
 router.post('/login', async (req, res) => {
   try {
-    const { email, password } = req.body;
-    if (!email || !password) return res.status(400).json({ message: 'Se necesita correo y contraseña' });
+    const { correo, password } = req.body;
+    if (!correo || !password) return res.status(400).json({ message: 'Se necesita correo y contraseña' });
 
-    const user = await User.findOne({ email });
+    const user = await CuentaUsuario.findOne({ correo }).select('+password');
     if (!user) return res.status(401).json({ message: 'Credenciales inválidas' });
 
     const isMatch = await bcrypt.compare(password, user.password);
@@ -55,7 +55,7 @@ router.post('/login', async (req, res) => {
     const token = generateToken(user);
     res.json({
       message: 'Autenticado',
-      user: { id: user._id, name: user.name, email: user.email },
+      user: { id: user._id, nombre: user.nombre, correo: user.correo },
       token,
     });
   } catch (err) {
