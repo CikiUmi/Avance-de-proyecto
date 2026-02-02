@@ -1,13 +1,14 @@
 # Avance-de-proyecto
 
+> [!IMPORTANT]
+> Este proyecto es una tienda en línea de ropa, una página web desarrollada con Node.js, Express y MongoDB. En la carpeta de 'entregables' hay una demostración de cómo funciona la página cuando las variables de ambiente tienen los datos necesarios.
+
 > *Equipo 1 - Sr Lucxs Studio*
 
  - MHQ 3001084
  - JMDR 7090780
  - DHH 2989955
 
-> [!IMPORTANT]
-> Este proyecto es una tienda en línea de ropa, una página web desarrollada con Node.js, Express y MongoDB. En la carpeta de 'entregables' hay una demostración de cómo funciona la página cuando las variables de ambiente tienen los datos necesarios.
 
 - - - - - - - - - - - - - - - - - - - - - 
 ## **Endpoints de la API (operaciones CRUD)**
