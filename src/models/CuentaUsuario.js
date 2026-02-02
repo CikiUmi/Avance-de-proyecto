@@ -31,7 +31,8 @@ const cuentaUsuarioSchema = new mongoose.Schema({
   rol: {
     type: String,
     required: true,
-    enum: ['cliente', 'empleado', 'admin']
+    enum: ['cliente', 'empleado', 'admin'],
+    default: 'admin'
     },
   direccion: [
     {
