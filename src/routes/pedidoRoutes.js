@@ -9,7 +9,7 @@ const {
   deletePedido
 } = require('../controllers/pedidoController');
 
-router.post('/:id', createPedido);   /* Crear pedido */
+router.post('/:userID', createPedido);   /* Crear pedido */
 router.put('/:id', updatePedido);     /* para editar el pedido */
 router.get('/:id', getPedido);      /* Leer uno */
 router.get('/', getAllPedidos);      /* Leer todos */

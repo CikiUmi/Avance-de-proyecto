@@ -1,15 +1,31 @@
 const Pedido = require('../models/Pedido');
-const router = require('../routes/carritoRoutes');
-
+const Carrito = require('../models/Carrito')
 // CREAR
 //sacar el total, borrar el carrito
 exports.createPedido = async (req, res) => {
   try {
     const { id } = req.params;
-    const nuevoPedido = new Pedido(router.get(id, getCarrito));
-    nuevoPedido.metodoPago = "débito";
+
+    /* Buscar carrito */
+    const carrito = await Carrito.getCarrito({ usuario: id });
+
+    if (!carrito) {
+      return res.status(404).json({ mensaje: 'Carrito no encontrado' });
+    }
+    
+    const nuevoPedido = new Pedido({
+      user: carrito.usuario,
+      productos: carrito.productos,
+      precioTotal: carrito.total,
+      metodoPago: "débito"
+    });
+
+
+    
+
     const pedidoGuardado = await nuevoPedido.save();
-    router.delete(id, deleteCarrito);
+    await Carrito.deleteCarrito({ usuario: id });
+
 
     res.status(200).json(pedidoGuardado);
   } catch (error) {
