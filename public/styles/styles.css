@@ -1,17 +1,36 @@
-/* Estilos aplicables a todas las páginas */
-
 /* Variables */
-:root{
-  --bg: #f6f7fb;
-  --card: #ffffff;
-  --text: #222;
-  --muted: #6b7280;
-  --primary: #0b72ff;
-  --accent: #ff7a59;
-  --radius: 10px;
-  --shadow: 0 6px 18px rgba(11,114,255,0.06);
+:root {
+  --bg: #0f1111;
+  --blanco: #ecf6f7;
+  --color-text-main: #ecf6f7;
+  --muted: #6b7580;
+  --primary: #0cd2d2;
+  --accent: rgb(0, 150, 225);
+  --radius-small: 10px;
+  --radius-big: 26px;
+  --shadow: 0 6px 18px rgba(22, 166, 239, 0.06);
   --gap: 16px;
   --max-width: 1100px;
   --container-padding: 20px;
-  --font: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Estilos aplicables a todas las páginas */
+/* = Elementos existentes*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--color-text-main);
+}
+
+h1, h2 {
+  font-family: 'Cinzel Decorative', serif;
+}
+
+h3, h4 {
+  font-family: 'Cinzel', serif;
 }
