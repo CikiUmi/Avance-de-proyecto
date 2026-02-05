@@ -18,7 +18,6 @@
 | Método | Ruta                   | Acción que realiza                 |
 | -------| ---------------------- | ---------------------------------- | 
 | POST   | /api/cuentaUsuario     | Creación de cuenta para user       |
-| POST   | /api/cuentaUsuario     | Creación de cuenta para usuario    |
 | GET    | /api/cuentaUsuario/:id | Obtener datos de un usuario por ID |
 | PUT    | /api/cuentaUsuario/:id | Actualizar datos del usuario       |
 | DELETE | /api/cuentaUsuario/:id | Eliminar cuenta de usuario         |
@@ -29,8 +28,8 @@
 | POST   | `/api/carrito`                | Crear un carrito para un usuario            |
 | PUT    | `/api/carrito/:userID/add`    | Añadir un producto al carrito del usuario   |
 | GET    | `/api/carrito/:userID`        | Obtener el carrito de un usuario            |
-| PUT    | `/api/carrito/:userID/update` | Reemplazar/actualizar productos del carrito |
-| DELETE | `/api/carrito/:userID/delete` | Eliminar el carrito del usuario             |
+| PUT    | `/api/carrito/:userID`        | Reemplazar/actualizar productos del carrito |
+| DELETE | `/api/carrito/:userID`        | Eliminar el carrito del usuario             |
 
 ### ***= catalogo***
 | Método | Endpoint            | Acción que realiza               |
@@ -42,13 +41,13 @@
 | DELETE | `/api/catalogo/:id` | Eliminar un producto por ID      |
 
 ### ***= pedido***
-| Método | Endpoint          | Acción que realiza          |
-| ------ | ----------------- | --------------------------- |
-| POST   | `/api/pedido`     | Crear un nuevo pedido       |
-| GET    | `/api/pedido`     | Obtener todos los pedidos   |
-| GET    | `/api/pedido/:id` | Obtener un pedido por ID    |
-| PUT    | `/api/pedido/:id` | Actualizar un pedido por ID |
-| DELETE | `/api/pedido/:id` | Eliminar un pedido por ID   |
+| Método | Endpoint                  | Acción que realiza          |
+| ------ | ------------------------- | --------------------------- |
+| POST   | `/api/pedido/:userID`     | Crear un nuevo pedido       |
+| GET    | `/api/pedido`             | Obtener todos los pedidos   |
+| GET    | `/api/pedido/:id`         | Obtener un pedido por ID    |
+| PUT    | `/api/pedido/:id`         | Actualizar un pedido por ID |
+| DELETE | `/api/pedido/:id`         | Eliminar un pedido por ID   |
 
 ### ***= auth***
 | Método | Endpoint             | Descripción                        |
