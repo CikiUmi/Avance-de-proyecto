@@ -4,15 +4,16 @@ const Carrito = require('../models/Carrito')
 //sacar el total, borrar el carrito
 exports.createPedido = async (req, res) => {
   try {
-    const { id } = req.params;
+    const { userID } = req.params;
 
-    /* Buscar carrito */
-    const carrito = await Carrito.getCarrito({ usuario: id });
+    // 1. Buscar carrito
+    const carrito = await Carrito.findOne({ usuario: userID });
 
     if (!carrito) {
       return res.status(404).json({ mensaje: 'Carrito no encontrado' });
     }
-    
+
+    // 2. Crear pedido
     const nuevoPedido = new Pedido({
       user: carrito.usuario,
       productos: carrito.productos,
@@ -20,19 +21,19 @@ exports.createPedido = async (req, res) => {
       metodoPago: "débito"
     });
 
-
-    
-
+    // 3. Guardar pedido
     const pedidoGuardado = await nuevoPedido.save();
-    await Carrito.deleteCarrito({ usuario: id });
 
+    // 4. Borrar carrito
+    await Carrito.deleteOne({ usuario: userID });
 
     res.status(200).json(pedidoGuardado);
+
   } catch (error) {
-    res.status(400).json({ mensaje: 'Error al guardar pedido: ', error});
+    console.error(error);
+    res.status(400).json({ mensaje: 'Error al guardar pedido', error });
   }
 };
-
 // READ
 /* Todos */
 exports.getAllPedidos = async (req, res) => {
