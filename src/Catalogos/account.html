@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Cuenta | MiTienda</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+  <h1 class="logo">MiTienda</h1>
+
+  <nav>
+    <a href="index.html">Catálogo</a>
+    <a href="cart.html">Carrito 🛒</a>
+    <a href="login.html">Cerrar sesión</a>
+  </nav>
+</header>
+
+<main class="container account">
+
+  <h2 class="section-title">Mi Cuenta</h2>
+
+  <div class="account-grid">
+
+    <!-- Datos personales -->
+    <section class="panel">
+      <h3>Datos personales</h3>
+
+      <label>Nombre</label>
+      <input type="text" value="Juan Pérez">
+
+      <label>Email</label>
+      <input type="email" value="juan@email.com">
+
+      <button class="btn">Guardar cambios</button>
+    </section>
+
+
+    <!-- Dirección -->
+    <section class="panel">
+      <h3>Dirección de envío</h3>
+
+      <label>Calle</label>
+      <input type="text" placeholder="Av. Principal 123">
+
+      <label>Ciudad</label>
+      <input type="text" placeholder="Ciudad">
+
+      <label>Código Postal</label>
+      <input type="text" placeholder="00000">
+
+      <button class="btn">Actualizar dirección</button>
+    </section>
+
+
+    <!-- Historial -->
+    <section class="panel full">
+      <h3>Historial de compras</h3>
+
+      <div class="order">
+        <span>Pedido #001</span>
+        <span>$250</span>
+        <span>Entregado</span>
+      </div>
+
+      <div class="order">
+        <span>Pedido #002</span>
+        <span>$350</span>
+        <span>En camino</span>
+      </div>
+    </section>
+
+  </div>
+
+</main>
+
+</body>
+</html>
