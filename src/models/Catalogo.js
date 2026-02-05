@@ -27,25 +27,22 @@ const catalogoSchema = new mongoose.Schema({
 
   },
 
-  imagen: {
-    type: String,   // link :D
-    required: true
-  },
-
   stock: [
     {
       modelo: { //antes se llamaba color..-.
         type: String,
         required: true,
         trim: true
-      }
-      ,
+      },
+      imagen: {
+        type: String,   // link :D
+        required: true
+      },
       detalles: [
         {
           talla: {
             type: String,
             enum: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
-            required: true
           },
           existencias: {
             type: Number,
