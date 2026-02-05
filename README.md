@@ -94,4 +94,5 @@ Rutas de API.
 ***= middlewares =***
 Jsonwebtoken, rutas protegidas.
 
- > Además de esto, el programa cuenta con los paquetes .json, las variables de entorno (un ejemplo), licencia y este archivo.
+
+ > Además de esto, el programa cuenta con los paquetes .json, las variables de entorno (un ejemplo), licencia, entregables y este archivo.
