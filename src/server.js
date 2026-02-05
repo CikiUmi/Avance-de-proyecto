@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // Ruta raíz -> página de login
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'public', 'pages', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'public', 'Catalogos', 'index.html'));
 });
 
 app.listen(PORT, () => {
