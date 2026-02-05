@@ -1,13 +1,19 @@
 const Pedido = require('../models/Pedido');
+const router = require('../routes/carritoRoutes');
 
 // CREAR
+//sacar el total, borrar el carrito
 exports.createPedido = async (req, res) => {
   try {
-    const nuevoPedido = new Pedido(req.body);
+    const { id } = req.params;
+    const nuevoPedido = new Pedido(router.get(id, getCarrito));
+    nuevoPedido.metodoPago = "débito";
     const pedidoGuardado = await nuevoPedido.save();
+    router.delete(id, deleteCarrito);
+
     res.status(200).json(pedidoGuardado);
   } catch (error) {
-    res.status(400).json({ mensaje: 'Error al guardar pedido: ', error });
+    res.status(400).json({ mensaje: 'Error al guardar pedido: ', error});
   }
 };
 
@@ -27,7 +33,7 @@ exports.getPedido = async (req, res) => {
   try {
     const { id } = req.params;
     const pedido = await Pedido.findById(id);
-        if (!pedido) {
+    if (!pedido) {
       return res.status(404).json({ mensaje: 'Pedido no encontrado' });
     }
 
@@ -44,8 +50,8 @@ exports.getPedido = async (req, res) => {
 exports.updatePedido = async (req, res) => {
   try {
     const { id } = req.params;
-    const pedidoActualizar = await Pedido.findByIdAndUpdate(id, req.body, {new:true, runValidators: true });
-        if (!pedidoActualizar) {
+    const pedidoActualizar = await Pedido.findByIdAndUpdate(id, req.body, { new: true, runValidators: true });
+    if (!pedidoActualizar) {
       return res.status(404).json({ mensaje: 'Pedido no encontrado' });
     }
 
@@ -78,4 +84,3 @@ exports.deletePedido = async (req, res) => {
 };
 
 
-  

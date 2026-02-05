@@ -12,7 +12,7 @@ const cuentaUsuarioSchema = new mongoose.Schema({
     type: String,
     required: true,
     enum: ['cliente', 'empleado', 'admin'],
-    default: 'admin'
+    default: 'cliente'
   },
   correo: {
     type: String,

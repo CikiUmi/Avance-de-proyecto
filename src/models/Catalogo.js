@@ -11,8 +11,7 @@ const catalogoSchema = new mongoose.Schema({
 
   categoria: {
     type: String,
-    enum: ['Camisa', 'Playera', 'Sudadera', 'Calzado', 'Accesorio', 'Pantalón', 'Falda', 'Vestido', 'Chamarra', 'Otro'],
-    trim: true
+    enum: ['Camisa', 'Playera', 'Sudadera', 'Calzado', 'Accesorio', 'Pantalón', 'Falda', 'Vestido', 'Chamarra', 'Otro']
   },
 
   precio: {
