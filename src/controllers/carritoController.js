@@ -1,5 +1,5 @@
 const Carrito = require('../models/Carrito');
-
+const Catalogo = require('../models/Catalogo');
 // ======================
 // CREAR
 // ======================
@@ -36,18 +36,29 @@ exports.createCarrito = async (req, res) => {
 exports.updateProductosCarrito = async (req, res) => {
   try {
     const { userID } = req.params;
-    const { idProducto, cantidad, costoUnitario } = req.body;
+    const { producto, cantidad } = req.body;
+
+    if (!producto || !cantidad) {
+      return res.status(400).json({ mensaje: 'Producto y cantidad son obligatorios' });
+    }
 
     const carrito = await Carrito.findOne({ usuario: userID });
     if (!carrito) {
       return res.status(404).json({ mensaje: 'Carrito no encontrado' });
     }
 
+    //Buscar el precio en catálogo
+    const productoDB = await Catalogo.findById(producto);
+    if (!productoDB) {
+      return res.status(404).json({ mensaje: 'Producto no existe en catálogo' });
+    }
+
+    const costoUnitario = productoDB.precio;
     const subtotal = cantidad * costoUnitario;
 
     // Ver si el producto ya existe
     const productoExistente = carrito.productos.find(
-      p => p.idProducto.toString() === idProducto
+      p => p.producto.toString() === producto
     );
 
     if (productoExistente) {
@@ -56,7 +67,7 @@ exports.updateProductosCarrito = async (req, res) => {
         productoExistente.cantidad * productoExistente.costoUnitario;
     } else {
       carrito.productos.push({
-        idProducto,
+        producto,
         cantidad,
         costoUnitario,
         subtotal
@@ -87,8 +98,7 @@ exports.getCarrito = async (req, res) => {
   try {
     const { userID } = req.params;
 
-    const carrito = await Carrito.findOne({ usuario: userID })
-      .populate('productos.idProducto');
+    const carrito = await Carrito.findOne({ usuario: userID }).populate('productos.producto');
 
     if (!carrito) {
       return res.status(404).json({ mensaje: 'Carrito no encontrado' });
