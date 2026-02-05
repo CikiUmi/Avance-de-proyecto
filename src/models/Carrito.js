@@ -6,24 +6,35 @@ const carritoSchema = new mongoose.Schema({
     ref: 'CuentaUsuario', //agarra el id
     required: true
   },
-
+  total: {
+    type: Number,
+    required: true,
+    min: 0
+  },
   productos: [
     {
       producto: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId, //id
         ref: 'Catalogo',
         required: true
       },
+       modelo: {
+        type: String,
+        required: true
+      },
+
+      talla: {
+        type: String,
+        enum: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+        required: true
+      },
+
       cantidad: {
         type: Number,
         required: true,
         min: 1
       },
-      costoUnitario: {
-        type: Number,
-        required: true,
-        min: 0
-      },
+
       subtotal: {
         type: Number,
         required: true,
@@ -32,11 +43,7 @@ const carritoSchema = new mongoose.Schema({
     }
   ],
 
-  total: {
-    type: Number,
-    required: true,
-    min: 0
-  }
+
 });
 
 module.exports = mongoose.model('Carrito', carritoSchema);

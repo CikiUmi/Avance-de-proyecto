@@ -6,23 +6,37 @@ const pedidoSchema = new mongoose.Schema({
     ref: 'CuentaUsuario',               // id de usuario
     required: true
   },
+
+  estado: {
+    type: String,
+    enum: ['en proceso', 'entregado', 'cancelado'],
+    default: 'en proceso',
+    required: true
+  },
   productos: [
     {
       producto: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Catalogo',        // id de producto
+        type: mongoose.Schema.Types.ObjectId, //id
+        ref: 'Catalogo',
         required: true
       },
+       modelo: {
+        type: String,
+        required: true
+      },
+
+      talla: {
+        type: String,
+        enum: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+        required: true
+      },
+
       cantidad: {
         type: Number,
         required: true,
         min: 1
       },
-      costoUnitario: {
-        type: Number,
-        required: true,
-        min: 0
-      },
+
       subtotal: {
         type: Number,
         required: true,
@@ -42,17 +56,9 @@ const pedidoSchema = new mongoose.Schema({
     default: 0,
     min: 0
   },
-
   metodoPago: {
     type: String,
     enum: ['débito', 'crédito', 'transferencia', 'depósito'],
-    required: true
-  },
-
-  estado: {
-    type: String,
-    enum: ['en proceso','entregado','cancelado'],
-    default: 'en proceso',
     required: true
   },
 

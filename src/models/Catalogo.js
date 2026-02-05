@@ -1,47 +1,24 @@
 const mongoose = require('mongoose');
 
 const catalogoSchema = new mongoose.Schema({
-  modelo: {
+  nombre: {
     type: String,
     required: true,
     trim: true,
     maxlength: 100,
-    minlenght: 5
+    minlength: 5
   },
 
-  tipo: {
+  categoria: {
     type: String,
-    required: true,
+    enum: ['Camisa', 'Playera', 'Sudadera', 'Calzado', 'Accesorio', 'Pantalón', 'Falda', 'Vestido', 'Chamarra', 'Otro'],
     trim: true
-  },
-
-  talla: {
-    type: String,
-    enum: ['XS','S','M','L','XL','XXL'],
-    required: true
   },
 
   precio: {
     type: Number,
     required: true,
     min: 0
-  },
-
-  existencias: {
-    type: Number,
-    required: true,
-    min: 0
-  },
-
-  costoUnitario: {
-    type: Number,
-    required: true,
-    min: 0
-  },
-
-  imagen: {
-    type: String,   // link :D
-    required: true
   },
 
   descripcion: {
@@ -51,11 +28,35 @@ const catalogoSchema = new mongoose.Schema({
 
   },
 
-  color: {
-    type: String,
-    required: true,
-    trim: true
-  }
+  imagen: {
+    type: String,   // link :D
+    required: true
+  },
+
+  stock: [
+    {
+      modelo: { //antes se llamaba color..-.
+        type: String,
+        required: true,
+        trim: true
+      }
+      ,
+      detalles: [
+        {
+          talla: {
+            type: String,
+            enum: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+            required: true
+          },
+          existencias: {
+            type: Number,
+            required: true,
+            min: 0
+          }
+        }
+      ]
+    }
+  ]
 });
 
 module.exports = mongoose.model('Catalogo', catalogoSchema);

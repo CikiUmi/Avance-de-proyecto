@@ -7,7 +7,12 @@ const cuentaUsuarioSchema = new mongoose.Schema({
     trim: true,
     minlength: 2,
     maxlength: 50
-
+  },
+  rol: {
+    type: String,
+    required: true,
+    enum: ['cliente', 'empleado', 'admin'],
+    default: 'admin'
   },
   correo: {
     type: String,
@@ -28,12 +33,6 @@ const cuentaUsuarioSchema = new mongoose.Schema({
     select: false, /* Para que no se pueda leer */
     maxlength: 100
   },
-  rol: {
-    type: String,
-    required: true,
-    enum: ['cliente', 'empleado', 'admin'],
-    default: 'admin'
-    },
   direccion: [
     {
       calle: {
@@ -62,7 +61,6 @@ const cuentaUsuarioSchema = new mongoose.Schema({
       }
     }
   ],
-
   lastLogin: {
     type: Date,
     default: null

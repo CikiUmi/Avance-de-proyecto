@@ -20,7 +20,7 @@ exports.createCarrito = async (req, res) => {
     });
 
     const carritoGuardado = await nuevoCarrito.save();
-    res.status(201).json(carritoGuardado);
+    res.status(200).json(carritoGuardado);
   } catch (error) {
     res.status(400).json({
       mensaje: 'Error al crear carrito',
@@ -36,10 +36,10 @@ exports.createCarrito = async (req, res) => {
 exports.updateProductosCarrito = async (req, res) => {
   try {
     const { userID } = req.params;
-    const { producto, cantidad } = req.body;
+    const { producto, cantidad, modelo, talla } = req.body;
 
-    if (!producto || !cantidad) {
-      return res.status(400).json({ mensaje: 'Producto y cantidad son obligatorios' });
+    if (!producto || !cantidad || !modelo ||!talla ) {
+      return res.status(400).json({ mensaje: 'Producto, modelo, talla y cantidad son obligatorios' });
     }
 
     const carrito = await Carrito.findOne({ usuario: userID });
@@ -58,7 +58,9 @@ exports.updateProductosCarrito = async (req, res) => {
 
     // Ver si el producto ya existe
     const productoExistente = carrito.productos.find(
-      p => p.producto.toString() === producto
+      p => p.producto.toString() === producto &&
+        p.modelo === modelo &&
+        p.talla === talla
     );
 
     if (productoExistente) {
@@ -68,8 +70,9 @@ exports.updateProductosCarrito = async (req, res) => {
     } else {
       carrito.productos.push({
         producto,
+        modelo,
+        talla,
         cantidad,
-        costoUnitario,
         subtotal
       });
     }

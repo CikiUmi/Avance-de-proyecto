@@ -5,7 +5,7 @@ exports.createPedido = async (req, res) => {
   try {
     const nuevoPedido = new Pedido(req.body);
     const pedidoGuardado = await nuevoPedido.save();
-    res.status(201).json(pedidoGuardado);
+    res.status(200).json(pedidoGuardado);
   } catch (error) {
     res.status(400).json({ mensaje: 'Error al guardar pedido: ', error });
   }
@@ -16,7 +16,7 @@ exports.createPedido = async (req, res) => {
 exports.getAllPedidos = async (req, res) => {
   try {
     const allPedidos = await Pedido.find();
-    res.status(201).json(allPedidos);
+    res.status(200).json(allPedidos);
   } catch (error) {
     res.status(400).json({ mensaje: 'Error al obtener pedidos: ', error });
   }
