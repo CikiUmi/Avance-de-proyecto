@@ -16,6 +16,7 @@
 }
 
 /* Estilos aplicables a todas las páginas */
+
 /* = Elementos existentes*/
 * {
   background-color: var(--bg);
@@ -96,6 +97,13 @@ h1, h2, h3 {
   font-feature-settings: 'liga';
 }
 
-.material-icons:hover {
-  color: red;
+.piePagina{
+
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 3fr;
+}
+
+.columnaPiePagina{
+background-color: #d20c4e;
+padding: 20px;
 }
