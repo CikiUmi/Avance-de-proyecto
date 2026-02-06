@@ -9,3 +9,11 @@
 #iconoCuenta{
   color: var(--blanco);
 }
+
+#copyright{
+  padding-top: 25px;
+  text-align: center;
+  color: var(--muted);
+  font-size: small;
+  text-transform: uppercase;
+}

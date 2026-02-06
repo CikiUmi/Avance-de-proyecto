@@ -70,6 +70,16 @@ h1, h2, h3 {
   color: none;
 }
 
+.badge{
+  position: absolute;
+  background-color: #d20c4e;
+  border-radius: 50%;
+  font-size: medium;
+  top: 10px;
+  padding: 0px 6px;
+
+}
+
   .material-icons { /* De google */
   font-family: 'Material Icons';
   font-weight: normal;
@@ -97,8 +107,7 @@ h1, h2, h3 {
   font-feature-settings: 'liga';
 }
 
-.piePagina{
-
+.footerColumnas {
   display: grid;
   grid-template-columns: 2fr 2fr 2fr 3fr;
 }
