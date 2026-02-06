@@ -5,8 +5,8 @@
   --blanco: #ecf6f7;
   --color-text-main: #ecf6f7;
   --muted: #6b7580;
-  --primary: #0cd2d2;
-  --accent: rgb(0, 150, 225);
+  --primary: #d20c4e;
+  --accent: rgb(91, 15, 30);
   --radius-small: 10px;
   --radius-big: 26px;
   --shadow: 0 6px 18px rgba(22, 166, 239, 0.06);
@@ -26,7 +26,7 @@
 }
 
 body {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Grotesk', 'serif';
   color: var(--color-text-main);
 }
 
@@ -58,8 +58,15 @@ h1, h2, h3 {
   color: var(--color-text-main);
   font-size: 20px;
   text-transform: uppercase;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 4px;
 
+}
 
+.button-icon {
+  border: none;
+  color: none;
 }
 
   .material-icons { /* De google */
@@ -74,6 +81,7 @@ h1, h2, h3 {
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
+  margin-left: 25px;
 
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
@@ -86,4 +94,8 @@ h1, h2, h3 {
 
   /* Support for IE. */
   font-feature-settings: 'liga';
+}
+
+.material-icons:hover {
+  color: red;
 }
