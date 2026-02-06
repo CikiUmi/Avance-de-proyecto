@@ -42,7 +42,7 @@ const catalogoSchema = new mongoose.Schema({
         {
           talla: {
             type: String,
-            enum: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+            enum: ['XS', 'S', 'M', 'L', 'XL', 'XXL','U'],
           },
           existencias: {
             type: Number,

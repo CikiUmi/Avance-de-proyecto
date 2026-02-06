@@ -1,0 +1,11 @@
+/* Estilos para todos los elementos con ID */
+
+#navbarDiv {
+  position: sticky;
+    top: 0;
+  z-index: 1000;
+}
+
+#iconoCuenta{
+  color: var(--blanco);
+}

@@ -1,17 +1,101 @@
-/* Estilos aplicables a todas las páginas */
-
 /* Variables */
-:root{
-  --bg: #f6f7fb;
-  --card: #ffffff;
-  --text: #222;
-  --muted: #6b7280;
-  --primary: #0b72ff;
-  --accent: #ff7a59;
-  --radius: 10px;
-  --shadow: 0 6px 18px rgba(11,114,255,0.06);
+:root {
+  --bg: #0f1111;
+  --bg-transparentoso: rgb(15, 17, 17,0.85);
+  --blanco: #ecf6f7;
+  --color-text-main: #ecf6f7;
+  --muted: #6b7580;
+  --primary: #d20c4e;
+  --accent: rgb(91, 15, 30);
+  --radius-small: 10px;
+  --radius-big: 26px;
+  --shadow: 0 6px 18px rgba(22, 166, 239, 0.06);
   --gap: 16px;
   --max-width: 1100px;
   --container-padding: 20px;
-  --font: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Estilos aplicables a todas las páginas */
+/* = Elementos existentes*/
+* {
+  background-color: var(--bg);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  font-family: 'Space Grotesk', 'serif';
+  color: var(--color-text-main);
+}
+
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+}
+
+/* = Clases nuevas*/
+.logo {
+  font-family: 'Cinzel Decorative', serif;
+}
+
+.navbar {
+  background: var(--bg-transparentoso);
+  padding: 16px 40px;
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.navbar a {
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: var(--color-text-main);
+  font-size: 20px;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 4px;
+
+}
+
+.button-icon {
+  border: none;
+  color: none;
+}
+
+  .material-icons { /* De google */
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 30px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  margin-left: 25px;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.material-icons:hover {
+  color: red;
 }
