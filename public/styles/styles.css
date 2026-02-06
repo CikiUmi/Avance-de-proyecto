@@ -1,6 +1,7 @@
 /* Variables */
 :root {
   --bg: #0f1111;
+  --bg-transparentoso: rgb(15, 17, 17,0.85);
   --blanco: #ecf6f7;
   --color-text-main: #ecf6f7;
   --muted: #6b7580;
@@ -17,9 +18,11 @@
 /* Estilos aplicables a todas las páginas */
 /* = Elementos existentes*/
 * {
+  background-color: var(--bg);
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 }
 
 body {
@@ -27,10 +30,60 @@ body {
   color: var(--color-text-main);
 }
 
-h1, h2 {
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+}
+
+/* = Clases nuevas*/
+.logo {
   font-family: 'Cinzel Decorative', serif;
 }
 
-h3, h4 {
-  font-family: 'Cinzel', serif;
+.navbar {
+  background: var(--bg-transparentoso);
+  padding: 16px 40px;
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.navbar a {
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: var(--color-text-main);
+  font-size: 20px;
+  text-transform: uppercase;
+
+
+}
+
+  .material-icons { /* De google */
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 30px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
 }
