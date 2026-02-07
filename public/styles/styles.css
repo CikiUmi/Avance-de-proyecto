@@ -29,6 +29,8 @@
 body {
   font-family: 'Space Grotesk', 'serif';
   color: var(--color-text-main);
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1, h2, h3 {
@@ -45,6 +47,7 @@ h1, h2, h3 {
   padding: 16px 40px;
   display: flex;
   position: sticky;
+  top: 0px;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 8px rgba(0,0,0,1);
@@ -92,7 +95,6 @@ h1, h2, h3 {
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
-  margin-left: 25px;
 
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
@@ -112,7 +114,23 @@ h1, h2, h3 {
   grid-template-columns: 2fr 2fr 2fr 3fr;
 }
 
+.footerFilas{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
 .columnaPiePagina{
 background-color: #d20c4e;
 padding: 20px;
 }
+
+.filaRedesSociales{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+

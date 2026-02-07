@@ -11,9 +11,12 @@
 }
 
 #copyright{
-  padding-top: 25px;
+  padding:7px;
   text-align: center;
   color: var(--muted);
   font-size: small;
   text-transform: uppercase;
+
+  width: 100%;
+  
 }
