@@ -57,13 +57,13 @@ h1, h2, h3 {
 
 .navbar a {
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 0px 20px;
   margin-right: 20px;
   color: var(--color-text-main);
   font-size: 20px;
   text-transform: uppercase;
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   margin-top: 4px;
 
 }
@@ -77,9 +77,9 @@ h1, h2, h3 {
   position: absolute;
   background-color: #d20c4e;
   border-radius: 50%;
-  font-size: medium;
-  top: 10px;
-  padding: 0px 6px;
+  font-size: small;
+  top: 12px;
+  padding: 1px 4px;
 
 }
 
@@ -88,7 +88,6 @@ h1, h2, h3 {
   font-weight: normal;
   font-style: normal;
   font-size: 30px;  /* Preferred icon size */
-  display: inline-block;
   line-height: 1;
   text-transform: none;
   letter-spacing: normal;
