@@ -26,7 +26,9 @@ class navigationBar extends HTMLElement {
       <h1 class="logo">Sir LucXs StudiO</h1>
 
       <nav>
-        <a href="catalogo.html">Catálogo</a>
+      <a href="catalogo.html" class = "navBarTitles">Pedidos</a>
+      <a href="#" class = "navBarTitles">Sobre nosotros</a>
+      <a href="#" class = "navBarTitles">Catálogo</a>
 
         <a href= "#">
           <i class="material-icons"  id="iconoCarrito">shopping_cart</i>
@@ -34,7 +36,7 @@ class navigationBar extends HTMLElement {
         </a>
 
         <a href= "#">
-          <i class="material-icons">person</i>
+          <i class="material-icons" id="iconoUser">person</i>
         </a>
 
       </nav>
