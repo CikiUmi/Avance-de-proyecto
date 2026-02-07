@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Login</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+
+<body style="background-color: white;">
+  <button onclick=visibilidadDialog(true)>LOG IN</button>
+
+  <dialog id="login-dialog">
+    <div class= "areaDelLogin">
+          <h2>Iniciar sesión</h2>
+    <form>
+
+
+      <input type="email" placeholder="Correo" autocomplete="off">
+      <input type="password" placeholder="Contraseña" autocomplete="off">
+
+      <button class="btn">Entrar</button>
+      <button class="btn" type="button" onclick= visibilidadDialog(false)>Cancelar</button>
+
+    </form>
+    </div>
+  </dialog>
+
+</body>
+  <script src="../app/login.js"></script>
+</html>
