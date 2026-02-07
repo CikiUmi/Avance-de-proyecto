@@ -2,10 +2,21 @@
 
 #navbarDiv {
   position: sticky;
-    top: 0;
+  top: 0;
   z-index: 1000;
 }
 
-#iconoCuenta{
-  color: var(--blanco);
+#iconoCarrito{
+  font-size: 25px;
+}
+
+#copyright{
+  padding:7px;
+  text-align: center;
+  color: var(--muted);
+  font-size: small;
+  text-transform: uppercase;
+  margin: 25x;
+  width: 100%;
+  
 }

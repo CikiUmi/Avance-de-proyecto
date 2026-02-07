@@ -29,6 +29,8 @@
 body {
   font-family: 'Space Grotesk', 'serif';
   color: var(--color-text-main);
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1, h2, h3 {
@@ -45,6 +47,7 @@ h1, h2, h3 {
   padding: 16px 40px;
   display: flex;
   position: sticky;
+  top: 0px;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 8px rgba(0,0,0,1);
@@ -54,13 +57,13 @@ h1, h2, h3 {
 
 .navbar a {
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 0px 20px;
   margin-right: 20px;
   color: var(--color-text-main);
   font-size: 20px;
   text-transform: uppercase;
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   margin-top: 4px;
 
 }
@@ -70,19 +73,27 @@ h1, h2, h3 {
   color: none;
 }
 
+.badge{
+  position: absolute;
+  background-color: #d20c4e;
+  border-radius: 50%;
+  font-size: small;
+  top: 12px;
+  padding: 1px 4px;
+
+}
+
   .material-icons { /* De google */
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
   font-size: 30px;  /* Preferred icon size */
-  display: inline-block;
   line-height: 1;
   text-transform: none;
   letter-spacing: normal;
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
-  margin-left: 25px;
 
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
@@ -97,13 +108,28 @@ h1, h2, h3 {
   font-feature-settings: 'liga';
 }
 
-.piePagina{
-
+.footerColumnas {
   display: grid;
   grid-template-columns: 2fr 2fr 2fr 3fr;
+}
+
+.footerFilas{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
 }
 
 .columnaPiePagina{
 background-color: #d20c4e;
 padding: 20px;
 }
+
+.filaRedesSociales{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
