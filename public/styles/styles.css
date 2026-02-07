@@ -57,15 +57,18 @@ h1, h2, h3 {
 
 .navbar a {
   text-decoration: none;
-  margin-left: 0px 20px;
-  margin-right: 20px;
   color: var(--color-text-main);
-  font-size: 20px;
+  font-size: 21px;
   text-transform: uppercase;
   display: inline-block;
   vertical-align: middle;
   margin-top: 4px;
+  font-weight: 400;
 
+}
+
+.navBarTitles{
+  margin-left: 30px;
 }
 
 .button-icon {
@@ -74,12 +77,12 @@ h1, h2, h3 {
 }
 
 .badge{
-  position: absolute;
+  position: relative;
   background-color: #d20c4e;
   border-radius: 50%;
-  font-size: small;
-  top: 12px;
-  padding: 1px 4px;
+  font-size: medium;
+  top: -22px;
+  padding: 0px 5px;
 
 }
 
