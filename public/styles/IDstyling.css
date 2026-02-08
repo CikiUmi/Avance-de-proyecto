@@ -26,3 +26,11 @@
   width: 100%;
   
 }
+
+#entrarBoton{
+  background-color: var(--blanco);
+}
+
+#crearCuentaBoton{
+    background-color: var(--blanco);
+}

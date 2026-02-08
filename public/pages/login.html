@@ -5,30 +5,89 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap"
+    rel="stylesheet">
+  <!-- Íconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/028972a11e.js" crossorigin="anonymous"></script>
+
   <title>Login</title>
   <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/IDstyling.css">
 </head>
 
 
 <body style="background-color: white;">
   <button onclick=visibilidadDialog(true)>LOG IN</button>
+  <button onclick=visibilidadRegistro(true)>Registraraw</button>
+
 
   <dialog id="login-dialog">
-    <div class= "areaDelLogin">
-          <h2>Iniciar sesión</h2>
-    <form>
+    <div class="areaDelLogin tarjetaLogReg">
+      <form>
+        <h2>Iniciar sesión</h2>
 
+        <div class="input-logReg">
+          <input type="email" placeholder="Correo" autocomplete="off">
+          <i class="material-icons">mail</i>
 
-      <input type="email" placeholder="Correo" autocomplete="off">
-      <input type="password" placeholder="Contraseña" autocomplete="off">
+        </div>
+        <div class="input-logReg">
+          <input type="password" placeholder="Contraseña" autocomplete="off">
+          <i class="material-icons">lock</i>
 
-      <button class="btn">Entrar</button>
-      <button class="btn" type="button" onclick= visibilidadDialog(false)>Cancelar</button>
+        </div>
 
-    </form>
+        <div class="wrapper-button">
+                    <button class="log-button" type="button" onclick=visibilidadDialog(false)>Cancelar</button>
+
+          <button class="log-button" type="button" id="entrarBoton">Entrar</button>
+        </div>
+
+        <button class="log-button-a" type="button" onclick=intercambioElementos()>Aún no tengo una cuenta</button>
+
+      </form>
+    </div>
+  </dialog>
+
+  <dialog id="register-dialog">
+    <div class="areaDelRegistro tarjetaLogReg">
+      <form>
+        <h2>Registrarse</h2>
+
+        <div class="input-logReg">
+          <input type="text" placeholder="Nombre de Usuario" autocomplete="off">
+          <i class="material-icons">person</i>
+        </div>
+
+        <div class="input-logReg">
+          <input type="email" placeholder="Correo" autocomplete="off">
+          <i class="material-icons">mail</i>
+        </div>
+
+        <div class="input-logReg">
+          <input type="password" placeholder="Contraseña" autocomplete="off">
+          <i class="material-icons">lock</i>
+        </div>
+
+        <div class="wrapper-button">
+          <button class="log-button" type="button" onclick=visibilidadRegistro(false)>Cancelar</button>
+                    <button class="log-button" type="button" id="crearCuentaBoton">Entrar</button>
+
+        </div>
+        <button class="log-button-a" type="button" onclick=intercambioElementos()>¿Ya tienes una cuenta?</button>
+
+      </form>
     </div>
   </dialog>
 
 </body>
-  <script src="../app/login.js"></script>
+<script src="../app/login.js"></script>
+<script src="../app/components/login-dialog.js"></script>
+
 </html>

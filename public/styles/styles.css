@@ -1,10 +1,11 @@
 /* Variables */
 :root {
   --bg: #0f1111;
-  --bg-transparentoso: rgb(15, 17, 17,0.85);
+  --bg-transparentoso: rgb(15, 17, 17, 0.85);
   --blanco: #ecf6f7;
   --color-text-main: #ecf6f7;
   --muted: #6b7580;
+  --mid: #282A2C;
   --primary: #d20c4e;
   --accent: rgb(91, 15, 30);
   --radius-small: 10px;
@@ -19,33 +20,65 @@
 
 /* = Elementos existentes*/
 * {
-  background-color: var(--bg);
+  font-family: 'Space Grotesk', 'serif';
+  background-color: transparent;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
 }
 
 body {
-  font-family: 'Space Grotesk', 'serif';
   color: var(--color-text-main);
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--bg);
+
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Cinzel', serif;
 }
 
-dialog{
-  padding: 0;
+a {
+  text-decoration: none;
+  transition: all 0.4s;
 }
+
+a:hover{
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+dialog {
+  border-radius: var(--radius-big);
+  border: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  background-color: transparent;
+  transition: all 0.3s ease;
+
+}
+
 
 dialog::backdrop {
   background-color: rgb(15, 17, 17, 0.6);
+  box-shadow: 0px 2px 8px var(--shadow);
+  box-shadow: var(--bg-transparentoso);
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(3px);
+  transition: opacity 0.3s ease;
 }
 
-/* = Clases nuevas*/
+button{cursor: pointer;}
+
+input{cursor: pointer;}
+
+/* === Clases nuevas*/
 /* BARRA DE NAVEGACIÓN */
 .logo {
   font-family: 'Cinzel Decorative', serif;
@@ -59,7 +92,7 @@ dialog::backdrop {
   top: 0px;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,1);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 1);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
@@ -76,7 +109,7 @@ dialog::backdrop {
 
 }
 
-.navBarTitles{
+.navBarTitles {
   margin-left: 30px;
 }
 
@@ -85,9 +118,9 @@ dialog::backdrop {
   color: none;
 }
 
-.badge{
+.badge {
   position: relative;
-  background-color: #d20c4e;
+  background-color: var(--primary);
   border-radius: 50%;
   font-size: medium;
   top: -22px;
@@ -95,11 +128,13 @@ dialog::backdrop {
 
 }
 
-  .material-icons { /* De google */
+.material-icons {
+  /* De google */
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 30px;  /* Preferred icon size */
+  font-size: 30px;
+  /* Preferred icon size */
   line-height: 1;
   text-transform: none;
   letter-spacing: normal;
@@ -107,19 +142,27 @@ dialog::backdrop {
   white-space: nowrap;
   direction: ltr;
 
-  -webkit-font-smoothing: antialiased; /* Support for all WebKit browsers. */
-  text-rendering: optimizeLegibility; /* Support for Safari and Chrome. */
-  -moz-osx-font-smoothing: grayscale; /* Support for Firefox. */
-  font-feature-settings: 'liga'; /* Support for IE. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for all WebKit browsers. */
+  text-rendering: optimizeLegibility;
+  /* Support for Safari and Chrome. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for Firefox. */
+  font-feature-settings: 'liga';
+  /* Support for IE. */
 }
 
 /* FOOTER */
-.footerColumnas {
+.piePagina{
   display: grid;
-  grid-template-columns: 2fr 2fr 2fr 3fr;
+  grid-template-columns: 3fr 2fr 2fr 3fr;
 }
 
-.footerFilas{
+.piePagina a{
+  color: var(--blanco);
+}
+
+.footerFilas {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -127,14 +170,134 @@ dialog::backdrop {
   text-align: center;
 }
 
-.columnaPiePagina{
-background-color: #d20c4e;
-padding: 20px;
+.listaRecursos{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: var(--blanco);
 }
 
-.filaRedesSociales{
+.button-contacto{
+  color: var(--blanco);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: var(--bg);
+}
+
+
+.columnaPiePagina {
+  background-color: var(--accent);
+  padding: 20px;
+}
+
+.filaRedesSociales {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+/* LOGIN Y REGISTRO */
+
+.log-button-a {
+  background-color: none;
+  border: none;
+  color: var(--muted);
+  text-decoration: underline;
+}
+
+.tarjetaLogReg {
+  width: min(40vw, 500px);
+  max-width: 70vb;
+  padding: clamp(20px, 5vw, 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(215deg, var(--bg), var(--accent));
+  color: var(--blanco);
+  box-shadow:0px 2px 8px var(--bg-transparentoso);
+}
+
+.input-logReg{
+  display: flex;
+  flex-direction: row;
+  margin: var(--container-padding) 0px;
+}
+
+.input-logReg i{
+  padding-left: 15px;
+}
+
+
+.input-logReg input{
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--muted);
+  color: var(--blanco);
+  transition: all 0.2s;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.input-logReg input:hover{
+    border-bottom: 2px solid var(--accent);
+}
+
+.input-logReg input:focus{
+    border-bottom: 2px solid var(--primary);
+}
+
+.tarjetaLogReg .wrapper-button{
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  gap: 15px; 
+  margin-top: 60px;
+  
+}
+
+.log-button{
+  width: 100%;
+  padding: 5px;
+  border: none;
+  background-color: var(--primary);
+  border-radius: var(--radius-small);
+  font-size: 1rem;
+}
+
+.log-button-a {
+  text-decoration: none;
+  transition: all 0.2s;
+  margin-top: 20px;
+  font-size: 1rem;
+    text-decoration: underline;
+}
+
+.log-button-a:hover{
+  color: var(--primary);
+
+}
+
+.tarjetaLogReg h2 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  margin-bottom: 1rem;
+}
+
+
+@media (max-width: 480px) {
+  .tarjetaLogReg {
+    padding: 20px;
+  }
+
+  .wrapper-button {
+    flex-direction: column;  /* botones uno abajo del otro */
+  }
+
+  .log-button {
+    width: 100%;
+  }
 }
