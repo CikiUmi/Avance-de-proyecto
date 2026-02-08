@@ -24,6 +24,7 @@
   text-transform: uppercase;
   margin: 25x;
   width: 100%;
+  margin-bottom: 50px;
   
 }
 
@@ -33,4 +34,12 @@
 
 #crearCuentaBoton{
     background-color: var(--blanco);
+}
+
+#primerColumnaFooter{
+  margin-left: 30px;
+}
+
+#ultimaColumnaFooter{
+  margin-right: 30px;
 }

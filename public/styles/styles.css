@@ -8,8 +8,8 @@
   --mid: #282A2C;
   --primary: #d20c4e;
   --accent: rgb(91, 15, 30);
-  --radius-small: 10px;
-  --radius-big: 26px;
+  --radius-small: 5px;
+  --radius-big: 15px;
   --shadow: 0 6px 18px rgba(22, 166, 239, 0.06);
   --gap: 16px;
   --max-width: 1100px;
@@ -35,6 +35,11 @@ body {
 
 }
 
+footer{
+    background-color: var(--accent);
+    background: linear-gradient(20deg, var(--bg), var(--accent));
+}
+
 h1,
 h2,
 h3 {
@@ -44,11 +49,14 @@ h3 {
 a {
   text-decoration: none;
   transition: all 0.4s;
+  font-weight: 300;
 }
 
 a:hover{
   color: var(--primary);
   text-decoration: underline;
+    cursor: pointer;
+
 }
 
 dialog {
@@ -63,7 +71,6 @@ dialog {
   transition: all 0.3s ease;
 
 }
-
 
 dialog::backdrop {
   background-color: rgb(15, 17, 17, 0.6);
@@ -82,6 +89,11 @@ input{cursor: pointer;}
 /* BARRA DE NAVEGACIÓN */
 .logo {
   font-family: 'Cinzel Decorative', serif;
+}
+
+.slogan {
+  font-weight: 500;
+
 }
 
 .navbar {
@@ -155,11 +167,93 @@ input{cursor: pointer;}
 /* FOOTER */
 .piePagina{
   display: grid;
-  grid-template-columns: 3fr 2fr 2fr 3fr;
+  grid-template-columns: 3fr 2fr 3fr 4fr;
 }
 
 .piePagina a{
   color: var(--blanco);
+}
+
+.piePagina a:hover{
+  color: var(--muted);
+}
+
+.piePagina h2{
+  font-family: 'Space Grotesk', 'serif';
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.piePagina .logo{
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2rem;
+}
+
+.columnaPiePagina {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;  
+  padding-top: 30px;
+}
+
+.listaRecursos{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: var(--blanco);
+}
+
+.newsletterPie{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.newsletterPie input{
+  border: 1px solid var(--muted);
+  padding: 10px 10px;
+  border-radius: var(--radius-small);
+  color: var(--blanco);
+  width: 100%;
+}
+
+.newsletterPie input:focus{
+  border: 1px solid var(--blanco);
+  padding: 10px 10px;
+  border-radius: var(--radius-small);
+  color: var(--blanco);
+  width: 100%;
+}
+
+.button-contacto{
+  color: var(--blanco);
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-small);
+  background-color: var(--bg);
+  transition: all 0.2s;
+}
+
+.button-contacto:hover{
+  color: var(--blanco);
+  border: none;
+  padding: 10px 20px;
+  
+  border-radius: var(--radius-small);
+  background-color: var(--bg);
+  box-shadow:0px 2px 8px var(--bg-transparentoso);
+}
+
+.button-contacto:active{
+  color: var(--blanco);
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-small);
+  background-color: var(--mid);
 }
 
 .footerFilas {
@@ -170,36 +264,26 @@ input{cursor: pointer;}
   text-align: center;
 }
 
-.listaRecursos{
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  color: var(--blanco);
-}
-
-.button-contacto{
-  color: var(--blanco);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  background-color: var(--bg);
-}
-
-
-.columnaPiePagina {
-  background-color: var(--accent);
-  padding: 20px;
-}
-
 .filaRedesSociales {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 15px;
+  gap: 3px;
+  margin-bottom: 5px;
+}
+
+.footerIcons{
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.footerIcons:hover{
+  color: var(--blanco);
 }
 
 /* LOGIN Y REGISTRO */
-
 .log-button-a {
   background-color: none;
   border: none;
@@ -300,4 +384,7 @@ input{cursor: pointer;}
   .log-button {
     width: 100%;
   }
+}
+
+@media (max-width: 800px) {
 }

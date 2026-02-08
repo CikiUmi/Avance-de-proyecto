@@ -6,19 +6,29 @@ class navigationBar extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-<!-- Fuentes e íconos -->
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap"
     rel="stylesheet">
 
+  <!-- Íconos -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/028972a11e.js" crossorigin="anonymous"></script>
 
   <!-- Hoja(s) de estilos :DD -->
   <link rel="stylesheet" href="../styles/styles.css">
   <link rel="stylesheet" href="../styles/IDstyling.css">
+
+  <!-- Script -->
+  <script src="../app/components/nav-bar.js" type="text/javascript" defer></script>
+  <script src="../app/components/login-dialog.js" type="text/javascript" defer></script>
+  <script src="../app/components/pie-pagina.js" type="text/javascript" defer></script>
+
+  <!-- Información de la página -->
+  <link rel="icon" href="../resources/SirLucxsStudio-Logo.ico">
 
 
   <div id="navbarDiv">
