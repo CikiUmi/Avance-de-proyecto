@@ -7,9 +7,9 @@
   --muted: #6b7580;
   --mid: #282A2C;
   --primary: #d20c4e;
-  --accent: rgb(91, 15, 30);
-  --radius-small: 10px;
-  --radius-big: 26px;
+  --accent: #5b0f1e;
+  --radius-small: 5px;
+  --radius-big: 15px;
   --shadow: 0 6px 18px rgba(22, 166, 239, 0.06);
   --gap: 16px;
   --max-width: 1100px;
@@ -35,6 +35,11 @@ body {
 
 }
 
+footer {
+  background-color: var(--accent);
+  background: linear-gradient(20deg, var(--bg), var(--accent));
+}
+
 h1,
 h2,
 h3 {
@@ -44,11 +49,14 @@ h3 {
 a {
   text-decoration: none;
   transition: all 0.4s;
+  font-weight: 300;
 }
 
-a:hover{
+a:hover {
   color: var(--primary);
   text-decoration: underline;
+  cursor: pointer;
+
 }
 
 dialog {
@@ -64,24 +72,40 @@ dialog {
 
 }
 
-
 dialog::backdrop {
   background-color: rgb(15, 17, 17, 0.6);
   box-shadow: 0px 2px 8px var(--shadow);
   box-shadow: var(--bg-transparentoso);
   -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(3px);
-  transition: opacity 0.3s ease;
+  transition: 0.3s ease;
 }
 
-button{cursor: pointer;}
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: all 0.2s;
 
-input{cursor: pointer;}
+}
+
+button:hover {
+  box-shadow: 0px 2px 8px var(--bg-transparentoso);
+
+}
+
+input {
+  cursor: pointer;
+}
 
 /* === Clases nuevas*/
 /* BARRA DE NAVEGACIÓN */
 .logo {
   font-family: 'Cinzel Decorative', serif;
+}
+
+.slogan {
+  font-weight: 500;
+
 }
 
 .navbar {
@@ -106,7 +130,17 @@ input{cursor: pointer;}
   vertical-align: middle;
   margin-top: 4px;
   font-weight: 400;
+  transition: all 0.2s;
+}
 
+.navbar a:hover {
+  border-bottom: solid var(--accent);
+  font-weight: 600;
+}
+
+.navbar a:focus {
+  color: var(--muted);
+  border-bottom: solid var(--accent);
 }
 
 .navBarTitles {
@@ -125,6 +159,7 @@ input{cursor: pointer;}
   font-size: medium;
   top: -22px;
   padding: 0px 5px;
+  display: none;
 
 }
 
@@ -153,13 +188,95 @@ input{cursor: pointer;}
 }
 
 /* FOOTER */
-.piePagina{
+.piePagina {
   display: grid;
-  grid-template-columns: 3fr 2fr 2fr 3fr;
+  grid-template-columns: 3fr 2fr 3fr 4fr;
 }
 
-.piePagina a{
+.piePagina a {
   color: var(--blanco);
+}
+
+.piePagina a:hover {
+  color: var(--muted);
+}
+
+.piePagina h2 {
+  font-family: 'Space Grotesk', 'serif';
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.piePagina .logo {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2rem;
+}
+
+.columnaPiePagina {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  padding-top: 30px;
+}
+
+.listaRecursos {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: var(--blanco);
+}
+
+.newsletterPie {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.newsletterPie input {
+  border: 1px solid var(--muted);
+  padding: 10px 10px;
+  border-radius: var(--radius-small);
+  color: var(--blanco);
+  width: 100%;
+}
+
+.newsletterPie input:focus {
+  border: 1px solid var(--blanco);
+  padding: 10px 10px;
+  border-radius: var(--radius-small);
+  color: var(--blanco);
+  width: 100%;
+}
+
+.button-contacto {
+  color: var(--blanco);
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-small);
+  background-color: var(--bg);
+  transition: all 0.2s;
+}
+
+.button-contacto:hover {
+  color: var(--blanco);
+  border: none;
+  padding: 10px 20px;
+
+  border-radius: var(--radius-small);
+  background-color: var(--bg);
+  box-shadow: 0px 2px 8px var(--bg-transparentoso);
+}
+
+.button-contacto:active {
+  color: var(--blanco);
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-small);
+  background-color: var(--mid);
 }
 
 .footerFilas {
@@ -170,36 +287,26 @@ input{cursor: pointer;}
   text-align: center;
 }
 
-.listaRecursos{
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  color: var(--blanco);
-}
-
-.button-contacto{
-  color: var(--blanco);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  background-color: var(--bg);
-}
-
-
-.columnaPiePagina {
-  background-color: var(--accent);
-  padding: 20px;
-}
-
 .filaRedesSociales {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 15px;
+  gap: 3px;
+  margin-bottom: 5px;
+}
+
+.footerIcons {
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.footerIcons:hover {
+  color: var(--blanco);
 }
 
 /* LOGIN Y REGISTRO */
-
 .log-button-a {
   background-color: none;
   border: none;
@@ -215,23 +322,21 @@ input{cursor: pointer;}
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(215deg, var(--bg), var(--accent));
+  background: linear-gradient(255deg, rgb(15, 17, 17, 0.8), rgb(91, 15, 30, 0.8), rgb(15, 17, 17, 0.8));
   color: var(--blanco);
-  box-shadow:0px 2px 8px var(--bg-transparentoso);
 }
 
-.input-logReg{
+.input-logReg {
   display: flex;
   flex-direction: row;
   margin: var(--container-padding) 0px;
 }
 
-.input-logReg i{
+.input-logReg i {
   padding-left: 15px;
 }
 
-
-.input-logReg input{
+.input-logReg input {
   outline: none;
   border: none;
   border-bottom: 2px solid var(--muted);
@@ -241,32 +346,44 @@ input{cursor: pointer;}
   font-size: 1rem;
 }
 
-.input-logReg input:hover{
-    border-bottom: 2px solid var(--accent);
+.input-logReg input:hover {
+  border-bottom: 2px solid var(--accent);
 }
 
-.input-logReg input:focus{
-    border-bottom: 2px solid var(--primary);
+.input-logReg input:focus {
+  border-bottom: 2px solid var(--primary);
 }
 
-.tarjetaLogReg .wrapper-button{
+.errorTextCuenta {
+  color: var(--primary);
+  text-align: left;
+  font-style: italic;
+  display: none;
+}
+
+.tarjetaLogReg .wrapper-button {
   align-items: center;
   width: 100%;
   display: flex;
   flex-direction: row;
   margin: 0px;
-  gap: 15px; 
+  gap: 15px;
   margin-top: 60px;
-  
+
 }
 
-.log-button{
+.log-button {
   width: 100%;
-  padding: 5px;
+  padding: 7px;
   border: none;
-  background-color: var(--primary);
+  background-color: var(--bg);
   border-radius: var(--radius-small);
   font-size: 1rem;
+  color: var(--blanco);
+}
+
+.muted-button:active {
+  background-color: var(--mid);
 }
 
 .log-button-a {
@@ -274,12 +391,17 @@ input{cursor: pointer;}
   transition: all 0.2s;
   margin-top: 20px;
   font-size: 1rem;
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-.log-button-a:hover{
-  color: var(--primary);
+.log-button-a:hover {
+  color: var(--blanco-);
+  box-shadow: none;
 
+}
+
+.log-button:hover {
+  box-shadow: 0px 8px 14px var(--bg-transparentoso);
 }
 
 .tarjetaLogReg h2 {
@@ -294,10 +416,13 @@ input{cursor: pointer;}
   }
 
   .wrapper-button {
-    flex-direction: column;  /* botones uno abajo del otro */
+    flex-direction: column;
+    /* botones uno abajo del otro */
   }
 
   .log-button {
     width: 100%;
   }
 }
+
+@media (max-width: 800px) {}
