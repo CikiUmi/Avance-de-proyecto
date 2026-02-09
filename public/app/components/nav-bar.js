@@ -30,10 +30,11 @@ class navigationBar extends HTMLElement {
   <!-- Información de la página -->
   <link rel="icon" href="../resources/SirLucxsStudio-Logo.ico">
 
-
   <div id="navbarDiv">
     <header class="navbar">
+    <a href= "#" id="logoNavBar">
       <h1 class="logo">Sir LucXs StudiO</h1>
+    </a>
 
       <nav>
       <a href="catalogo.html" class = "navBarTitles">Pedidos</a>
@@ -42,7 +43,7 @@ class navigationBar extends HTMLElement {
 
         <a href= "#">
           <i class="material-icons"  id="iconoCarrito">shopping_cart</i>
-          <span class="badge">4</span>
+          <span class="badge">X</span>
         </a>
 
         <a href= "#">

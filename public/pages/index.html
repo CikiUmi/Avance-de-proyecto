@@ -40,6 +40,95 @@
 
   <!-- Contenido página main -->
   <main>
+
+    <body>
+      <button onclick=visibilidadDialog(true)>LOG IN</button>
+      <button onclick=visibilidadRegistro(true)>Registraraw</button>
+
+
+      <dialog id="login-dialog">
+        <div class="areaDelLogin tarjetaLogReg">
+          <form>
+            <h2>Iniciar sesión</h2>
+
+            <div>
+              <div class="input-logReg">
+                <input type="email" placeholder="Correo" autocomplete="off">
+                <i class="material-icons">mail</i>
+              </div>
+                <p class="errorTextCuenta">* La cuenta no existe</p>
+            </div>
+
+            <div>
+            <div class="input-logReg">
+              <input type="password" placeholder="Contraseña" autocomplete="off">
+              <i class="material-icons">lock</i>
+            </div>
+                            <p class="errorTextCuenta">* Contraseña errónea</p>
+
+            </div>
+
+            <div class="wrapper-button">
+              <button class="log-button muted-button" type="button" onclick=visibilidadDialog(false)>Cancelar</button>
+
+              <button class="log-button blanco-button" type="button" id="entrarBoton">Entrar</button>
+            </div>
+
+            <button class="log-button-a" type="button" onclick=intercambioElementos()>Aún no tengo una cuenta</button>
+
+          </form>
+        </div>
+      </dialog>
+
+      <dialog id="register-dialog">
+        <div class="areaDelRegistro tarjetaLogReg">
+          <form>
+            <h2>Registrarse</h2>
+            <div>
+              <div class="input-logReg">
+                <input type="text" placeholder="Nombre de Usuario" autocomplete="off">
+
+                <i class="material-icons">person</i>
+              </div>
+              <p class="errorTextCuenta">* Se requiere un nombre de usuario</p>
+            </div>
+
+
+            <div>
+              <div class="input-logReg">
+                <input type="email" placeholder="Correo" autocomplete="off">
+                <i class="material-icons">mail</i>
+              </div>
+              <p class="errorTextCuenta">* Este correo ya está en uso</p>
+              <p class="errorTextCuenta">* Se requiere un correo</p>
+            </div>
+
+            <div>
+              <div class="input-logReg">
+                <input type="password" placeholder="Contraseña" autocomplete="off">
+
+                <i class="material-icons">lock</i>
+              </div>
+              <p class="errorTextCuenta">* Se requiere una contraseña</p>
+              <p class="errorTextCuenta">* Utiliza al menos una Mayúscula</p>
+              <p class="errorTextCuenta">* Utiliza al menos una Minúscula</p>
+              <p class="errorTextCuenta">* Utiliza al menos un Número</p>
+              <p class="errorTextCuenta">* Utiliza al menos un Símbolo</p>
+            </div>
+
+            <div class="wrapper-button">
+              <button class="log-button muted-button" type="button" onclick=visibilidadRegistro(false)>Cancelar</button>
+              <button class="log-button blanco-button" type="button" id="crearCuentaBoton">Entrar</button>
+
+            </div>
+            <button class="log-button-a" type="button" onclick=intercambioElementos()>¿Ya tienes una cuenta?</button>
+
+          </form>
+        </div>
+      </dialog>
+
+
+
   </main>
 
   <!-- Pie de página -->

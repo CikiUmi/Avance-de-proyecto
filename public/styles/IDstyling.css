@@ -13,7 +13,19 @@
 
 #iconoUser{
   padding-left: 5px;
+}
 
+
+
+#logoNavBar:hover{
+  border-bottom: none;
+  color: var(--accent);
+  transition: all 0.7s;
+}
+
+#logoNavBar:focus{
+  border-bottom: none;
+  color: var(--muted);
 }
 
 #copyright{
@@ -30,10 +42,22 @@
 
 #entrarBoton{
   background-color: var(--blanco);
+  color: var(--bg);
+  font-weight: 700;
+}
+
+#entrarBoton:active{
+  background-color: var(--muted);
 }
 
 #crearCuentaBoton{
     background-color: var(--blanco);
+    color: var(--bg);
+      font-weight: 700;
+}
+
+#crearCuentaBoton:active{
+  background-color: var(--muted);
 }
 
 #primerColumnaFooter{

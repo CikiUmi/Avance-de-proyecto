@@ -7,7 +7,7 @@
   --muted: #6b7580;
   --mid: #282A2C;
   --primary: #d20c4e;
-  --accent: rgb(91, 15, 30);
+  --accent: #5b0f1e;
   --radius-small: 5px;
   --radius-big: 15px;
   --shadow: 0 6px 18px rgba(22, 166, 239, 0.06);
@@ -78,10 +78,20 @@ dialog::backdrop {
   box-shadow: var(--bg-transparentoso);
   -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(3px);
-  transition: opacity 0.3s ease;
+  transition: 0.3s ease;
 }
 
-button{cursor: pointer;}
+button{
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: all 0.2s;
+
+}
+
+button:hover{
+    box-shadow:0px 2px 8px var(--bg-transparentoso);
+
+}
 
 input{cursor: pointer;}
 
@@ -118,7 +128,17 @@ input{cursor: pointer;}
   vertical-align: middle;
   margin-top: 4px;
   font-weight: 400;
+  transition: all 0.2s;
+}
 
+.navbar a:hover {
+  border-bottom: solid var(--accent);
+  font-weight: 600;
+}
+
+.navbar a:focus {
+color: var(--muted);
+ border-bottom: solid var(--accent);
 }
 
 .navBarTitles {
@@ -137,6 +157,7 @@ input{cursor: pointer;}
   font-size: medium;
   top: -22px;
   padding: 0px 5px;
+  display: none;
 
 }
 
@@ -299,9 +320,8 @@ input{cursor: pointer;}
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(215deg, var(--bg), var(--accent));
+  background: linear-gradient(255deg, rgb(15, 17, 17,0.8), rgb(91, 15, 30,0.8), rgb(15, 17, 17,0.8));
   color: var(--blanco);
-  box-shadow:0px 2px 8px var(--bg-transparentoso);
 }
 
 .input-logReg{
@@ -313,7 +333,6 @@ input{cursor: pointer;}
 .input-logReg i{
   padding-left: 15px;
 }
-
 
 .input-logReg input{
   outline: none;
@@ -333,6 +352,12 @@ input{cursor: pointer;}
     border-bottom: 2px solid var(--primary);
 }
 
+.errorTextCuenta{
+  color: var(--primary);
+text-align: left;
+font-style: italic;
+}
+
 .tarjetaLogReg .wrapper-button{
   align-items: center;
   width: 100%;
@@ -346,11 +371,16 @@ input{cursor: pointer;}
 
 .log-button{
   width: 100%;
-  padding: 5px;
+  padding: 7px;
   border: none;
-  background-color: var(--primary);
+  background-color: var(--bg);
   border-radius: var(--radius-small);
   font-size: 1rem;
+  color: var(--blanco);
+}
+
+.muted-button:active{
+  background-color: var(--mid);
 }
 
 .log-button-a {
@@ -362,8 +392,13 @@ input{cursor: pointer;}
 }
 
 .log-button-a:hover{
-  color: var(--primary);
+  color: var(--blanco-);
+  box-shadow: none;
 
+}
+
+.log-button:hover{
+    box-shadow:0px 8px 14px var(--bg-transparentoso);
 }
 
 .tarjetaLogReg h2 {
