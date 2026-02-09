@@ -24,10 +24,13 @@
   <link rel="stylesheet" href="../styles/styles.css">
   <link rel="stylesheet" href="../styles/IDstyling.css">
 
-  <!-- Script -->
+  <!-- Componentes HTML -->
   <script src="../app/components/nav-bar.js" type="text/javascript" defer></script>
   <script src="../app/components/login-dialog.js" type="text/javascript" defer></script>
   <script src="../app/components/pie-pagina.js" type="text/javascript" defer></script>
+
+  <!-- Script -->
+  <script src="../app/register.js" defer></script>
 
   <!-- Información de la página -->
   <link rel="icon" href="../resources/SirLucxsStudio-Logo.ico">
@@ -40,8 +43,6 @@
 
   <!-- Contenido página main -->
   <main>
-
-    <body>
       <button onclick=visibilidadDialog(true)>LOG IN</button>
       <button onclick=visibilidadRegistro(true)>Registraraw</button>
 
@@ -53,18 +54,18 @@
 
             <div>
               <div class="input-logReg">
-                <input type="email" placeholder="Correo" autocomplete="off">
+                <input type="email" placeholder="Correo" id="loginCorreoInput" autocomplete="off">
                 <i class="material-icons">mail</i>
               </div>
-                <p class="errorTextCuenta">* La cuenta no existe</p>
+                <p class="errorTextCuenta" id="loginCorreoError">* La cuenta no existe</p>
             </div>
 
             <div>
             <div class="input-logReg">
-              <input type="password" placeholder="Contraseña" autocomplete="off">
+              <input type="password" placeholder="Contraseña" id="loginContrasenaInput" autocomplete="off">
               <i class="material-icons">lock</i>
             </div>
-                            <p class="errorTextCuenta">* Contraseña errónea</p>
+                            <p class="errorTextCuenta" id="loginContrasenaError">* Contraseña errónea</p>
 
             </div>
 
@@ -86,41 +87,41 @@
             <h2>Registrarse</h2>
             <div>
               <div class="input-logReg">
-                <input type="text" placeholder="Nombre de Usuario" autocomplete="off">
+                <input type="text" placeholder="Nombre de Usuario" id="registroUserInput" autocomplete="off">
 
                 <i class="material-icons">person</i>
               </div>
-              <p class="errorTextCuenta">* Se requiere un nombre de usuario</p>
+              <p class="errorTextCuenta" id="registroUsuarioError">* Se requiere un nombre de usuario</p>
             </div>
 
 
             <div>
               <div class="input-logReg">
-                <input type="email" placeholder="Correo" autocomplete="off">
+                <input type="email" placeholder="Correo" id="registroCorreoInput" autocomplete="off">
                 <i class="material-icons">mail</i>
               </div>
-              <p class="errorTextCuenta">* Este correo ya está en uso</p>
-              <p class="errorTextCuenta">* Se requiere un correo</p>
+              <p class="errorTextCuenta" id="registroCorreoErrorRepetido">* Este correo ya está en uso</p>
+              <p class="errorTextCuenta" id="registroCorreoError">* Se requiere un correo</p>
             </div>
 
             <div>
               <div class="input-logReg">
-                <input type="password" placeholder="Contraseña" autocomplete="off">
+                <input type="password" placeholder="Contraseña" id="registroContrasenaInput" autocomplete="off">
 
                 <i class="material-icons">lock</i>
               </div>
-              <p class="errorTextCuenta">* Se requiere una contraseña</p>
-              <p class="errorTextCuenta">* Utiliza al menos una Mayúscula</p>
-              <p class="errorTextCuenta">* Utiliza al menos una Minúscula</p>
-              <p class="errorTextCuenta">* Utiliza al menos un Número</p>
-              <p class="errorTextCuenta">* Utiliza al menos un Símbolo</p>
+              <p class="errorTextCuenta" id="registroContrasenaError">* Se requiere una contraseña</p>
+              <p class="errorTextCuenta" id="registroContrasenaErrorMayuscula">* Utiliza al menos una Mayúscula</p>
+              <p class="errorTextCuenta" id="registroContrasenaErrorMinuscula">* Utiliza al menos una Minúscula</p>
+              <p class="errorTextCuenta" id="registroContrasenaErrorNumero">* Utiliza al menos un Número</p>
+              <p class="errorTextCuenta" id="registroContrasenaErrorSimbolo">* Utiliza al menos un Símbolo</p>
             </div>
 
             <div class="wrapper-button">
               <button class="log-button muted-button" type="button" onclick=visibilidadRegistro(false)>Cancelar</button>
-              <button class="log-button blanco-button" type="button" id="crearCuentaBoton">Entrar</button>
+              <button class="log-button blanco-button" type="button" id="crearCuentaBoton">Comenzar</button>
 
-            </div>
+            </div> 
             <button class="log-button-a" type="button" onclick=intercambioElementos()>¿Ya tienes una cuenta?</button>
 
           </form>

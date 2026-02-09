@@ -34,18 +34,18 @@
         <h2>Iniciar sesión</h2>
 
         <div class="input-logReg">
-          <input type="email" placeholder="Correo" autocomplete="off">
+          <input type="email" placeholder="Correo" id="loginCorreoInput" autocomplete="off">
           <i class="material-icons">mail</i>
 
         </div>
         <div class="input-logReg">
-          <input type="password" placeholder="Contraseña" autocomplete="off">
+          <input type="password" placeholder="Contraseña" id="loginContraseñaInput" autocomplete="off">
           <i class="material-icons">lock</i>
 
         </div>
 
         <div class="wrapper-button">
-                    <button class="log-button muted-button" type="button" onclick=visibilidadDialog(false)>Cancelar</button>
+          <button class="log-button muted-button" type="button" onclick=visibilidadDialog(false)>Cancelar</button>
 
           <button class="log-button blanco-button" type="button" id="entrarBoton">Entrar</button>
         </div>
@@ -62,32 +62,33 @@
         <h2>Registrarse</h2>
 
         <div class="input-logReg">
-          <input type="text" placeholder="Nombre de Usuario" autocomplete="off">
+          <input type="text" placeholder="Nombre de Usuario" id="registroUserInput" autocomplete="off">
           <i class="material-icons">person</i>
         </div>
 
         <div class="input-logReg">
-          <input type="email" placeholder="Correo" autocomplete="off">
+          <input type="email" placeholder="Correo" id="registroCorreoInput" autocomplete="off">
           <i class="material-icons">mail</i>
         </div>
 
         <div class="input-logReg">
-          <input type="password" placeholder="Contraseña" autocomplete="off">
+          <input type="password" placeholder="Contraseña" id="registroContraseñaInput" autocomplete="off">
           <i class="material-icons">lock</i>
         </div>
 
         <div class="wrapper-button">
           <button class="log-button muted-button" type="button" onclick=visibilidadRegistro(false)>Cancelar</button>
-                    <button class="log-button" type="button" id="crearCuentaBoton">Entrar</button>
+          <button class="log-button" type="button" id="crearCuentaBoton">Entrar</button>
 
         </div>
-        <button class="log-button-a blanco-button" type="button" onclick=intercambioElementos()>¿Ya tienes una cuenta?</button>
+        <button class="log-button-a blanco-button" type="button" onclick=intercambioElementos()>¿Ya tienes una
+          cuenta?</button>
 
       </form>
     </div>
   </dialog>
 
-  
+
 
 </body>
 <script src="../app/login.js"></script>
