@@ -322,7 +322,7 @@ input {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(255deg, rgb(15, 17, 17, 0.8), rgb(91, 15, 30, 0.8), rgb(15, 17, 17, 0.8));
+  background: linear-gradient(1265deg, rgb(15, 17, 17, 0.5), rgb(91, 15, 30, 1), rgb(91, 15, 30, 0.8), rgb(15, 17, 17, 0.6));
   color: var(--blanco);
 }
 
@@ -359,6 +359,7 @@ input {
   text-align: left;
   font-style: italic;
   display: none;
+  padding: 0;
 }
 
 .tarjetaLogReg .wrapper-button {

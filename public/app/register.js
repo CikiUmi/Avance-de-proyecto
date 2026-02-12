@@ -24,27 +24,22 @@ const intentarRegistroUsuario = () => {
   const nombre = (registroUserInput.value).trim()
   const correo = (registroCorreoInput.value).trim()
   const password = (registroContrasenaInput.value).trim()
+  let numeroErrores = 0;
 
   if (nombre === "") {
     registroUsuarioError.style.display = "block";
-  } else {
-    registroUsuarioError.style.display = "none";
+    numeroErrores++;
   }
-
   if (correo === "") {
     registroCorreoError.style.display = "block";
+    numeroErrores++;
   }
-  else {
-    registroCorreoError.style.display = "none";
-  }
-
   if (password === "") {
     registroContrasenaError.style.display = "block";
-  } else {
-    registroContrasenaError.style.display = "none";
+    numeroErrores++;
   }
 
-  if (!(nombre === "") && !(correo === "") && !(password === "")) {
+  if (numeroErrores === 0) {
     //revisar regex de contraseña
     //revisar correo único
     //lamar pi
@@ -58,12 +53,26 @@ const intentarRegistroUsuario = () => {
   }
 };
 
-const ocultarError = (errorTexto) => {
-errorTexto.style.display = "none";
+/* const ocultarError =(errorMensaje) =>{
+  errorMensaje.style.display = "none";
+}; */
+
+function ocultarError(errorMensaje) {
+  errorMensaje.style.display = "none";
 }
 
 crearCuentaBoton.addEventListener("click", intentarRegistroUsuario);
-registroUserInput.addEventListener("input", registroUsuarioError.style.display = "none");
+
+registroUserInput.addEventListener("input", function () {
+  ocultarError(registroUsuarioError);
+});
+
+registroCorreoInput.addEventListener("input", function () {
+  ocultarError(registroCorreoError);
+});
+registroContrasenaInput.addEventListener("input", function () {
+  ocultarError(registroContrasenaError);
+});
 
 // Event listener para borrar error si se meten datos.
 // DEVOLVER 200, 400, 401, 500 etc
