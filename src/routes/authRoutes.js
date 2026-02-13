@@ -71,4 +71,8 @@ router.post('/login', async (req, res) => {
 
 
 //falta cerrar sesión o algo
+
+
+
+
 module.exports = router; //para usar en server.js
