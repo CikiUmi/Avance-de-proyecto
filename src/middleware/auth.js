@@ -10,11 +10,15 @@ const auth = (req, res, next) => {
     // payload puede contener { id: ..., iat: ..., exp: ... }
     req.user = { id: payload.id };
     next();
-    //const userRole = decoded.role;
-    //console.log('User role:', userRole);
+    const userRole = decoded.role;
+
   } catch (err) {
     return res.status(401).json({ message: 'El Token es inválido o ya expiró.' });
   }
 };
 
 module.exports = auth;
+
+if (userRole){
+  module.exports = userRole;
+}
