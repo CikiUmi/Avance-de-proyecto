@@ -1,13 +1,16 @@
 const Catalogo = require('../models/Catalogo');
+const userRole = require('../middleware/auth/');
 
 // CREAR
 exports.createProducto = async (req, res) => {
-  try {
-    const nuevoProducto = new Catalogo(req.body);
-    const productoGuardado = await nuevoProducto.save();
-    res.status(200).json(productoGuardado);
-  } catch (error) {
-    res.status(400).json({ mensaje: 'Error al añadir producto al catálogo: ', error });
+  if (userRole === 'admin'){
+    try {
+      const nuevoProducto = new Catalogo(req.body);
+      const productoGuardado = await nuevoProducto.save();
+      res.status(200).json(productoGuardado);
+    } catch (error) {
+      res.status(400).json({ mensaje: 'Error al añadir producto al catálogo: ', error });
+    }
   }
 };
 
