@@ -1,7 +1,7 @@
 {
   "name": "apf",
   "version": "1.0.0",
-  "description": "Este es un avance para el proyecto final. Materia: Desarrollo FullStack",
+  "description": "Este es el proyecto final. Materia: Desarrollo FullStack",
   "homepage": "https://github.com/CikiUmi/Avance-de-proyecto#readme",
   "bugs": {
     "url": "https://github.com/CikiUmi/Avance-de-proyecto/issues"
@@ -15,9 +15,9 @@
   "type": "commonjs",
   "main": "server.js",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cross-env NODE_ENV=production node src/server.js",
+    "dev": "cross-env NODE_ENV=development nodemon src/server.js",
+    "test": "cross-env NODE_ENV=test jest --runInBand --detectOpenHandles"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",
@@ -30,6 +30,7 @@
     "react-dom": "^19.2.4"
   },
   "devDependencies": {
+    "cross-env": "^10.1.0",
     "nodemon": "^3.1.11"
   }
 }
