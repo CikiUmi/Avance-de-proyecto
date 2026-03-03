@@ -1,5 +1,5 @@
 const Catalogo = require('../models/Catalogo');
-const userRole = require('../middleware/auth/');
+const userRole = require('../middleware/auth');
 
 // CREAR
 exports.createProducto = async (req, res) => {

@@ -1,0 +1,1187 @@
+export default function BarraLateral() {
+  return (
+    <div className="min-w-screen min-h-screen overflow-hidden">
+      <div className="bg-linear-[180deg,#CC081A0%,#D9043350%,#E7004C100%] w-[450px] h-[1024px] absolute left-[178px] top-5 overflow-hidden">
+        <img
+          src="/Imagen16.png"
+          className="w-[299px] h-[52px] absolute left-[75px] top-[948px] max-w-none"
+          alt="imagen 16"
+        />
+        <img
+          src="/Imagen17.png"
+          className="w-12 h-12 absolute left-[77px] top-[950px] max-w-none"
+          alt="imagen 17"
+        />
+        <img
+          src="/Imagen18.png"
+          className="w-12 h-12 absolute left-[77px] top-[950px] max-w-none"
+          alt="imagen 18"
+        />
+        <div className="grid pt-[30px] pr-[100px] pb-5 pl-[50px] w-[450px] h-24 absolute -left-px top-0 overflow-hidden">
+          <p className="flex flex-col justify-center text-[#FFF] font-gilroyBlack text-[40px] w-[300px] h-full">
+            Mi pedido
+          </p>
+        </div>
+        <div className="flex max-w-[450px] pt-2.5 pr-10 pb-[35px] pl-10 flex-col items-start gap-10 w-[450px] h-[852px] absolute left-0 top-24 overflow-hidden">
+          <div className="inline-grid rounded-[25px] bg-[#FFF] shadow-[4px4px4px0rgba(0,0,0,0.25)] h-full overflow-hidden relative">
+            <div className="flex py-5 px-[25px] flex-col justify-center items-end gap-[15px] bg-[#6F6F6F] shadow-[006px2pxrgba(0,0,0,0.25)] w-[370px] h-full absolute left-0 top-[418px] overflow-hidden">
+              <div className="flex flex-col items-start -space-y-[5px] w-full overflow-hidden">
+                <p className="text-[#FFF] font-gilroyBold text-[32px] w-full text-right">
+                  Total:
+                </p>
+                <p className="flex flex-col justify-center text-[#FFF] font-gilroyBold text-[40px] w-full h-[45px] text-right">
+                  $89.00 MXN
+                </p>
+              </div>
+              <div className="inline-grid w-full relative">
+                <div className="flex min-w-[70px] py-2.5 px-[15px] items-start rounded-[10px] bg-[#FFF] shadow-[4px4px4px0rgba(0,0,0,0.25)] w-full absolute left-[168px] top-0 overflow-hidden">
+                  <p className="flex flex-col justify-center text-[#6F6F6F] font-gilroyBold text-[28px] w-full h-full text-center">
+                    Pagar
+                  </p>
+                </div>
+                <div className="flex min-w-[70px] py-2.5 px-[15px] items-start rounded-[10px] border-[3px] border-[rgba(255,255,255,0.95)] shadow-[4px4px4px0rgba(0,0,0,0.25)] w-full absolute left-0 top-0 overflow-hidden">
+                  <p className="flex flex-col justify-center text-[rgba(255,255,255,0.95)] font-gilroyBold text-[28px] w-full h-[35px] text-center">
+                    Cancelar
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="inline-flex justify-center items-start gap-2.5 absolute w-[370px] h-[418px] absolute left-0 top-0 overflow-hidden">
+              <div className="flex flex-col justify-center items-start w-[345px] h-[841px] absolute left-0 top-0">
+                <div className="flex py-0 px-[5px] justify-center items-center border border-[#D9D9D9] bg-[#FFF] w-[355px] h-[120px] overflow-hidden">
+                  <div className="flex p-[15px] flex-col items-start shrink-0 w-[345px] h-[120px] overflow-hidden">
+                    <p className="line-clamp-1 overflow-hidden text-[#4A4A4A] text-ellipsis font-gilroyMedium text-[22px] w-full">
+                      Nombre del alimento &#x2F; bebida
+                    </p>
+                    <div className="flex pr-[5px] justify-between items-end flex-wrap w-full overflow-hidden">
+                      <p className="text-[#1E1E1E] font-gilroyBlack text-[26px] w-full h-6">
+                        $0000.00 MXN
+                      </p>
+                    </div>
+                    <div className="inline-grid pt-2.5 bg-[#FFF] w-full relative">
+                      <div className="inline-flex min-w-[70px] py-0.5 px-[15px] items-center rounded-[5px] border border-[#6F6F6F] absolute left-0 top-3.5">
+                        <p className="text-[#6F6F6F] font-gilroyRegular text-base absolute left-[15px] top-0.5">
+                          Eliminar
+                        </p>
+                      </div>
+                      <div className="inline-flex justify-center items-start bg-[#FFF] absolute left-[220px] top-2.5 overflow-hidden">
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-0 top-0 overflow-hidden">
+                          <p className="flex flex-col justify-center text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            -
+                          </p>
+                        </div>
+                        <div className="grid border-t-2 border-t-[#6F6F6F] border-b-2 border-b-[#6F6F6F] w-[35px] h-[30px] absolute left-[30px] top-0 overflow-hidden">
+                          <p className="text-[#2F2F2F] font-gilroyBold text-2xl leading-[35px] w-[35px] h-[30px] text-center">
+                            0
+                          </p>
+                        </div>
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-[65px] top-0 overflow-hidden">
+                          <p className="text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            +
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex py-0 px-[5px] justify-center items-center border border-[#D9D9D9] bg-[#FFF] w-[355px] h-[120px] overflow-hidden">
+                  <div className="flex p-[15px] flex-col items-start shrink-0 w-[345px] h-[120px] overflow-hidden">
+                    <p className="line-clamp-1 overflow-hidden text-[#4A4A4A] text-ellipsis font-gilroyMedium text-[22px] w-full">
+                      Nombre del alimento &#x2F; bebida
+                    </p>
+                    <div className="flex pr-[5px] justify-between items-end flex-wrap w-full overflow-hidden">
+                      <p className="text-[#1E1E1E] font-gilroyBlack text-[26px] w-full h-6">
+                        $0000.00 MXN
+                      </p>
+                    </div>
+                    <div className="inline-grid pt-2.5 bg-[#FFF] w-full relative">
+                      <div className="inline-flex min-w-[70px] py-0.5 px-[15px] items-center rounded-[5px] border border-[#6F6F6F] absolute left-0 top-3.5">
+                        <p className="text-[#6F6F6F] font-gilroyRegular text-base absolute left-[15px] top-0.5">
+                          Eliminar
+                        </p>
+                      </div>
+                      <div className="inline-flex justify-center items-start bg-[#FFF] absolute left-[220px] top-2.5 overflow-hidden">
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-0 top-0 overflow-hidden">
+                          <p className="flex flex-col justify-center text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            -
+                          </p>
+                        </div>
+                        <div className="grid border-t-2 border-t-[#6F6F6F] border-b-2 border-b-[#6F6F6F] w-[35px] h-[30px] absolute left-[30px] top-0 overflow-hidden">
+                          <p className="text-[#2F2F2F] font-gilroyBold text-2xl leading-[35px] w-[35px] h-[30px] text-center">
+                            0
+                          </p>
+                        </div>
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-[65px] top-0 overflow-hidden">
+                          <p className="text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            +
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex py-0 px-[5px] justify-center items-center border border-[#D9D9D9] bg-[#FFF] w-[355px] h-[120px] overflow-hidden">
+                  <div className="flex p-[15px] flex-col items-start shrink-0 w-[345px] h-[120px] overflow-hidden">
+                    <p className="line-clamp-1 overflow-hidden text-[#4A4A4A] text-ellipsis font-gilroyMedium text-[22px] w-full">
+                      Nombre del alimento &#x2F; bebida
+                    </p>
+                    <div className="flex pr-[5px] justify-between items-end flex-wrap w-full overflow-hidden">
+                      <p className="text-[#1E1E1E] font-gilroyBlack text-[26px] w-full h-6">
+                        $0000.00 MXN
+                      </p>
+                    </div>
+                    <div className="inline-grid pt-2.5 bg-[#FFF] w-full relative">
+                      <div className="inline-flex min-w-[70px] py-0.5 px-[15px] items-center rounded-[5px] border border-[#6F6F6F] absolute left-0 top-3.5">
+                        <p className="text-[#6F6F6F] font-gilroyRegular text-base absolute left-[15px] top-0.5">
+                          Eliminar
+                        </p>
+                      </div>
+                      <div className="inline-flex justify-center items-start bg-[#FFF] absolute left-[220px] top-2.5 overflow-hidden">
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-0 top-0 overflow-hidden">
+                          <p className="flex flex-col justify-center text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            -
+                          </p>
+                        </div>
+                        <div className="grid border-t-2 border-t-[#6F6F6F] border-b-2 border-b-[#6F6F6F] w-[35px] h-[30px] absolute left-[30px] top-0 overflow-hidden">
+                          <p className="text-[#2F2F2F] font-gilroyBold text-2xl leading-[35px] w-[35px] h-[30px] text-center">
+                            0
+                          </p>
+                        </div>
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-[65px] top-0 overflow-hidden">
+                          <p className="text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            +
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex py-0 px-[5px] justify-center items-center border border-[#D9D9D9] bg-[#FFF] w-[355px] h-[120px] overflow-hidden">
+                  <div className="flex p-[15px] flex-col items-start shrink-0 w-[345px] h-[120px] overflow-hidden">
+                    <p className="line-clamp-1 overflow-hidden text-[#4A4A4A] text-ellipsis font-gilroyMedium text-[22px] w-full">
+                      Nombre del alimento &#x2F; bebida
+                    </p>
+                    <div className="flex pr-[5px] justify-between items-end flex-wrap w-full overflow-hidden">
+                      <p className="text-[#1E1E1E] font-gilroyBlack text-[26px] w-full h-6">
+                        $0000.00 MXN
+                      </p>
+                    </div>
+                    <div className="inline-grid pt-2.5 bg-[#FFF] w-full relative">
+                      <div className="inline-flex min-w-[70px] py-0.5 px-[15px] items-center rounded-[5px] border border-[#6F6F6F] absolute left-0 top-3.5">
+                        <p className="text-[#6F6F6F] font-gilroyRegular text-base absolute left-[15px] top-0.5">
+                          Eliminar
+                        </p>
+                      </div>
+                      <div className="inline-flex justify-center items-start bg-[#FFF] absolute left-[220px] top-2.5 overflow-hidden">
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-0 top-0 overflow-hidden">
+                          <p className="flex flex-col justify-center text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            -
+                          </p>
+                        </div>
+                        <div className="grid border-t-2 border-t-[#6F6F6F] border-b-2 border-b-[#6F6F6F] w-[35px] h-[30px] absolute left-[30px] top-0 overflow-hidden">
+                          <p className="text-[#2F2F2F] font-gilroyBold text-2xl leading-[35px] w-[35px] h-[30px] text-center">
+                            0
+                          </p>
+                        </div>
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-[65px] top-0 overflow-hidden">
+                          <p className="text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            +
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex py-0 px-[5px] justify-center items-center border border-[#D9D9D9] bg-[#FFF] w-[355px] h-[120px] overflow-hidden">
+                  <div className="flex p-[15px] flex-col items-start shrink-0 w-[345px] h-[120px] overflow-hidden">
+                    <p className="line-clamp-1 overflow-hidden text-[#4A4A4A] text-ellipsis font-gilroyMedium text-[22px] w-full">
+                      Nombre del alimento &#x2F; bebida
+                    </p>
+                    <div className="flex pr-[5px] justify-between items-end flex-wrap w-full overflow-hidden">
+                      <p className="text-[#1E1E1E] font-gilroyBlack text-[26px] w-full h-6">
+                        $0000.00 MXN
+                      </p>
+                    </div>
+                    <div className="inline-grid pt-2.5 bg-[#FFF] w-full relative">
+                      <div className="inline-flex min-w-[70px] py-0.5 px-[15px] items-center rounded-[5px] border border-[#6F6F6F] absolute left-0 top-3.5">
+                        <p className="text-[#6F6F6F] font-gilroyRegular text-base absolute left-[15px] top-0.5">
+                          Eliminar
+                        </p>
+                      </div>
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-[30px] h-[30px] absolute left-[180px] top-2.5 "
+                      >
+                        <path
+                          d="M3.33333 26.6667H5.70833L22 10.375L19.625 8L3.33333 24.2917V26.6667ZM0 30V22.9167L22 0.958333C22.3333 0.652778 22.7014 0.416667 23.1042 0.25C23.5069 0.0833333 23.9306 0 24.375 0C24.8194 0 25.25 0.0833333 25.6667 0.25C26.0833 0.416667 26.4444 0.666667 26.75 1L29.0417 3.33333C29.375 3.63889 29.6181 4 29.7708 4.41667C29.9236 4.83333 30 5.25 30 5.66667C30 6.11111 29.9236 6.53472 29.7708 6.9375C29.6181 7.34028 29.375 7.70833 29.0417 8.04167L7.08333 30H0ZM20.7917 9.20833L19.625 8L22 10.375L20.7917 9.20833Z"
+                          fill="#DA0433"
+                        />
+                      </svg>
+                      <div className="inline-flex justify-center items-start bg-[#FFF] absolute left-[220px] top-2.5 overflow-hidden">
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-0 top-0 overflow-hidden">
+                          <p className="flex flex-col justify-center text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            -
+                          </p>
+                        </div>
+                        <div className="grid border-t-2 border-t-[#6F6F6F] border-b-2 border-b-[#6F6F6F] w-[35px] h-[30px] absolute left-[30px] top-0 overflow-hidden">
+                          <p className="text-[#2F2F2F] font-gilroyBold text-2xl leading-[35px] w-[35px] h-[30px] text-center">
+                            0
+                          </p>
+                        </div>
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-[65px] top-0 overflow-hidden">
+                          <p className="text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            +
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex py-0 px-[5px] justify-center items-center border border-[#D9D9D9] bg-[#FFF] w-[355px] h-[120px] overflow-hidden">
+                  <div className="flex p-[15px] flex-col items-start shrink-0 w-[345px] h-[120px] overflow-hidden">
+                    <p className="line-clamp-1 overflow-hidden text-[#4A4A4A] text-ellipsis font-gilroyMedium text-[22px] w-full">
+                      Nombre del alimento &#x2F; bebida
+                    </p>
+                    <div className="flex pr-[5px] justify-between items-end flex-wrap w-full overflow-hidden">
+                      <p className="text-[#1E1E1E] font-gilroyBlack text-[26px] w-full h-6">
+                        $0000.00 MXN
+                      </p>
+                    </div>
+                    <div className="inline-grid pt-2.5 bg-[#FFF] w-full relative">
+                      <div className="inline-flex min-w-[70px] py-0.5 px-[15px] items-center rounded-[5px] border border-[#6F6F6F] absolute left-0 top-3.5">
+                        <p className="text-[#6F6F6F] font-gilroyRegular text-base absolute left-[15px] top-0.5">
+                          Eliminar
+                        </p>
+                      </div>
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-[30px] h-[30px] absolute left-[180px] top-2.5 "
+                      >
+                        <path
+                          d="M3.33333 26.6667H5.70833L22 10.375L19.625 8L3.33333 24.2917V26.6667ZM0 30V22.9167L22 0.958333C22.3333 0.652778 22.7014 0.416667 23.1042 0.25C23.5069 0.0833333 23.9306 0 24.375 0C24.8194 0 25.25 0.0833333 25.6667 0.25C26.0833 0.416667 26.4444 0.666667 26.75 1L29.0417 3.33333C29.375 3.63889 29.6181 4 29.7708 4.41667C29.9236 4.83333 30 5.25 30 5.66667C30 6.11111 29.9236 6.53472 29.7708 6.9375C29.6181 7.34028 29.375 7.70833 29.0417 8.04167L7.08333 30H0ZM20.7917 9.20833L19.625 8L22 10.375L20.7917 9.20833Z"
+                          fill="#DA0433"
+                        />
+                      </svg>
+                      <div className="inline-flex justify-center items-start bg-[#FFF] absolute left-[220px] top-2.5 overflow-hidden">
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-0 top-0 overflow-hidden">
+                          <p className="flex flex-col justify-center text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            -
+                          </p>
+                        </div>
+                        <div className="grid border-t-2 border-t-[#6F6F6F] border-b-2 border-b-[#6F6F6F] w-[35px] h-[30px] absolute left-[30px] top-0 overflow-hidden">
+                          <p className="text-[#2F2F2F] font-gilroyBold text-2xl leading-[35px] w-[35px] h-[30px] text-center">
+                            0
+                          </p>
+                        </div>
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-[65px] top-0 overflow-hidden">
+                          <p className="text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            +
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex py-0 px-[5px] justify-center items-center border border-[#D9D9D9] bg-[#FFF] w-[355px] h-[120px] overflow-hidden">
+                  <div className="flex p-[15px] flex-col items-start shrink-0 w-[345px] h-[120px] overflow-hidden">
+                    <p className="line-clamp-1 overflow-hidden text-[#4A4A4A] text-ellipsis font-gilroyMedium text-[22px] w-full">
+                      Nombre del alimento &#x2F; bebida
+                    </p>
+                    <div className="flex pr-[5px] justify-between items-end flex-wrap w-full overflow-hidden">
+                      <p className="text-[#1E1E1E] font-gilroyBlack text-[26px] w-full h-6">
+                        $89.00 MXN
+                      </p>
+                    </div>
+                    <div className="inline-grid pt-2.5 bg-[#FFF] w-full relative">
+                      <div className="inline-flex min-w-[70px] py-0.5 px-[15px] items-center rounded-[5px] border border-[#6F6F6F] absolute left-0 top-3.5">
+                        <p className="text-[#6F6F6F] font-gilroyRegular text-base absolute left-[15px] top-0.5">
+                          Eliminar
+                        </p>
+                      </div>
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-[30px] h-[30px] absolute left-[180px] top-2.5 "
+                      >
+                        <path
+                          d="M3.33333 26.6667H5.70833L22 10.375L19.625 8L3.33333 24.2917V26.6667ZM0 30V22.9167L22 0.958333C22.3333 0.652778 22.7014 0.416667 23.1042 0.25C23.5069 0.0833333 23.9306 0 24.375 0C24.8194 0 25.25 0.0833333 25.6667 0.25C26.0833 0.416667 26.4444 0.666667 26.75 1L29.0417 3.33333C29.375 3.63889 29.6181 4 29.7708 4.41667C29.9236 4.83333 30 5.25 30 5.66667C30 6.11111 29.9236 6.53472 29.7708 6.9375C29.6181 7.34028 29.375 7.70833 29.0417 8.04167L7.08333 30H0ZM20.7917 9.20833L19.625 8L22 10.375L20.7917 9.20833Z"
+                          fill="#DA0433"
+                        />
+                      </svg>
+                      <div className="inline-flex justify-center items-start bg-[#FFF] absolute left-[220px] top-2.5 overflow-hidden">
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-0 top-0 overflow-hidden">
+                          <p className="flex flex-col justify-center text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            -
+                          </p>
+                        </div>
+                        <div className="grid border-t-2 border-t-[#6F6F6F] border-b-2 border-b-[#6F6F6F] w-[35px] h-[30px] absolute left-[30px] top-0 overflow-hidden">
+                          <p className="text-[#2F2F2F] font-gilroyBold text-2xl leading-[35px] w-[35px] h-[30px] text-center">
+                            0
+                          </p>
+                        </div>
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-[65px] top-0 overflow-hidden">
+                          <p className="text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            +
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-[15px] h-[418px] absolute left-[355px] top-0">
+                <div className="bg-[#D9D9D9] w-[25px] h-[418px] absolute left-0 top-0"></div>
+                <svg
+                  width="20"
+                  height="58"
+                  viewBox="0 0 20 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-[25px] h-[50px] absolute left-0 top-px "
+                >
+                  <g filter="url(#filter0_d_253_74)">
+                    <g filter="url(#filter1_d_253_74)">
+                      <rect x="5" width="25" height="50" fill="#ECECEC" />
+                    </g>
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_d_253_74"
+                      x="0"
+                      y="-4"
+                      width="33"
+                      height="59"
+                      filterUnits="userSpaceOnUse"
+                      colorInterpolationFilters="sRGB"
+                    >
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix
+                        in="SourceAlpha"
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha"
+                      />
+                      <feOffset dx="-1" />
+                      <feGaussianBlur stdDeviation="2" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in2="BackgroundImageFix"
+                        result="effect1_dropShadow_253_74"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect1_dropShadow_253_74"
+                        result="shape"
+                      />
+                    </filter>
+                    <filter
+                      id="filter1_d_253_74"
+                      x="5"
+                      y="0"
+                      width="33"
+                      height="58"
+                      filterUnits="userSpaceOnUse"
+                      colorInterpolationFilters="sRGB"
+                    >
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix
+                        in="SourceAlpha"
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha"
+                      />
+                      <feOffset dx="4" dy="4" />
+                      <feGaussianBlur stdDeviation="2" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in2="BackgroundImageFix"
+                        result="effect1_dropShadow_253_74"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect1_dropShadow_253_74"
+                        result="shape"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div className="flex p-5 flex-col justify-between items-center shrink-0 rounded-[35px] bg-[#FFF] shadow-[4px4px4px0rgba(0,0,0,0.25)] w-full h-[150px] overflow-hidden">
+            <div className="flex py-0 px-[5px] items-start gap-[25px] w-full h-full overflow-hidden">
+              <div className="flex flex-col justify-center items-start gap-[5px] w-full h-full overflow-hidden">
+                <p className="text-[#2F2F2F] font-gilroyBold text-xl w-full">
+                  Saldo Prepago
+                </p>
+                <div className="bg-[#D9D9D9] w-full"></div>
+                <p className="text-[#1E1E1E] font-gilroyBold text-[32px] w-full">
+                  $9999.00 MXN
+                </p>
+              </div>
+              <div className="flex flex-col items-start gap-[5px] w-full h-full overflow-hidden">
+                <p className="text-[#1E1E1E] font-gilroyBold text-xl w-full">
+                  Mi Monedero
+                </p>
+                <div className="bg-[#D9D9D9] w-full"></div>
+                <p className="text-[#1E1E1E] font-gilroyBold text-[32px] w-full">
+                  $9999.00 MXN
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="w-[86px] h-[86px] absolute left-[358px] top-2.5 overflow-hidden">
+          <svg
+            width="51"
+            height="43"
+            viewBox="0 0 51 43"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-[50px] h-[43px] absolute left-[18px] top-[22px] "
+          >
+            <path
+              d="M21.5 43L0 21.5L21.5 0L26.5167 5.01667L10.1229 21.5L26.5167 37.9833L21.5 43ZM45.15 43L23.65 21.5L45.15 0L50.1667 5.01667L33.7729 21.5L50.1667 37.9833L45.15 43Z"
+              fill="white"
+            />
+          </svg>
+          <div className="w-[86px] h-[881px] absolute left-[86px] top-[89px] overflow-hidden"></div>
+        </div>
+      </div>
+      <div className="bg-linear-[180deg,#CC081A0%,#D9043350%,#E7004C100%] w-[450px] h-[1024px] absolute left-[686px] top-[27px] overflow-hidden">
+        <img
+          src="/Imagen16(1).png"
+          className="w-[299px] h-[52px] absolute left-[75px] top-[948px] max-w-none"
+          alt="imagen 16"
+        />
+        <img
+          src="/Imagen17(1).png"
+          className="w-12 h-12 absolute left-[77px] top-[950px] max-w-none"
+          alt="imagen 17"
+        />
+        <img
+          src="/Imagen18(1).png"
+          className="w-12 h-12 absolute left-[77px] top-[950px] max-w-none"
+          alt="imagen 18"
+        />
+        <div className="grid pt-[30px] pr-[100px] pb-5 pl-[50px] w-[450px] h-24 absolute -left-px top-0 overflow-hidden">
+          <p className="flex flex-col justify-center text-[#FFF] font-gilroyBlack text-[40px] w-[300px] h-full">
+            Mi pedido
+          </p>
+        </div>
+        <div className="flex max-w-[450px] pt-2.5 pr-10 pb-[35px] pl-10 flex-col items-start gap-10 w-[450px] h-[852px] absolute left-0 top-24 overflow-hidden">
+          <div className="inline-grid rounded-[25px] bg-[#FFF] shadow-[4px4px4px0rgba(0,0,0,0.25)] h-full overflow-hidden relative">
+            <div className="flex py-5 px-[25px] flex-col justify-center items-end gap-[15px] bg-[#6F6F6F] shadow-[006px2pxrgba(0,0,0,0.25)] w-[370px] h-full absolute left-0 top-[418px] overflow-hidden">
+              <div className="flex flex-col items-start -space-y-[5px] w-full overflow-hidden">
+                <p className="text-[#FFF] font-gilroyBold text-[32px] w-full text-right">
+                  Total:
+                </p>
+                <p className="flex flex-col justify-center text-[#FFF] font-gilroyBold text-[40px] w-full h-[45px] text-right">
+                  $89.00 MXN
+                </p>
+              </div>
+              <div className="inline-grid w-full relative">
+                <div className="flex min-w-[70px] py-2.5 px-[15px] items-start rounded-[10px] bg-[#FFF] shadow-[4px4px4px0rgba(0,0,0,0.25)] w-full absolute left-[168px] top-0 overflow-hidden">
+                  <p className="flex flex-col justify-center text-[#6F6F6F] font-gilroyBold text-[28px] w-full h-full text-center">
+                    Pagar
+                  </p>
+                </div>
+                <div className="flex min-w-[70px] py-2.5 px-[15px] items-start rounded-[10px] border-[3px] border-[rgba(255,255,255,0.95)] shadow-[4px4px4px0rgba(0,0,0,0.25)] w-full absolute left-0 top-0 overflow-hidden">
+                  <p className="flex flex-col justify-center text-[rgba(255,255,255,0.95)] font-gilroyBold text-[28px] w-full h-[35px] text-center">
+                    Cancelar
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-center items-end gap-2.5 absolute w-[370px] h-[418px] absolute left-0 top-0 overflow-hidden">
+              <div className="shrink-0 w-[345px] h-[841px] relative">
+                <div className="flex py-0 px-[5px] justify-center items-center border border-[#D9D9D9] bg-[#FFF] w-[355px] h-[120px] absolute left-0 top-[600px] overflow-hidden">
+                  <div className="flex p-[15px] flex-col items-start shrink-0 w-[345px] h-[120px] overflow-hidden">
+                    <p className="line-clamp-1 overflow-hidden text-[#4A4A4A] text-ellipsis font-gilroyMedium text-[22px] w-full">
+                      Nombre del alimento &#x2F; bebida
+                    </p>
+                    <div className="flex pr-[5px] justify-between items-end flex-wrap w-full overflow-hidden">
+                      <p className="text-[#1E1E1E] font-gilroyBlack text-[26px] w-full h-6">
+                        $0000.00 MXN
+                      </p>
+                    </div>
+                    <div className="inline-grid pt-2.5 bg-[#FFF] w-full relative">
+                      <div className="inline-flex min-w-[70px] py-0.5 px-[15px] items-center rounded-[5px] border border-[#6F6F6F] absolute left-0 top-3.5">
+                        <p className="text-[#6F6F6F] font-gilroyRegular text-base absolute left-[15px] top-0.5">
+                          Eliminar
+                        </p>
+                      </div>
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-[30px] h-[30px] absolute left-[180px] top-2.5 "
+                      >
+                        <path
+                          d="M3.33333 26.6667H5.70833L22 10.375L19.625 8L3.33333 24.2917V26.6667ZM0 30V22.9167L22 0.958333C22.3333 0.652778 22.7014 0.416667 23.1042 0.25C23.5069 0.0833333 23.9306 0 24.375 0C24.8194 0 25.25 0.0833333 25.6667 0.25C26.0833 0.416667 26.4444 0.666667 26.75 1L29.0417 3.33333C29.375 3.63889 29.6181 4 29.7708 4.41667C29.9236 4.83333 30 5.25 30 5.66667C30 6.11111 29.9236 6.53472 29.7708 6.9375C29.6181 7.34028 29.375 7.70833 29.0417 8.04167L7.08333 30H0ZM20.7917 9.20833L19.625 8L22 10.375L20.7917 9.20833Z"
+                          fill="#DA0433"
+                        />
+                      </svg>
+                      <div className="inline-flex justify-center items-start bg-[#FFF] absolute left-[220px] top-2.5 overflow-hidden">
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-0 top-0 overflow-hidden">
+                          <p className="flex flex-col justify-center text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            -
+                          </p>
+                        </div>
+                        <div className="grid border-t-2 border-t-[#6F6F6F] border-b-2 border-b-[#6F6F6F] w-[35px] h-[30px] absolute left-[30px] top-0 overflow-hidden">
+                          <p className="text-[#2F2F2F] font-gilroyBold text-2xl leading-[35px] w-[35px] h-[30px] text-center">
+                            0
+                          </p>
+                        </div>
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-[65px] top-0 overflow-hidden">
+                          <p className="text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            +
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex py-0 px-[5px] justify-center items-center border border-[#D9D9D9] bg-[#FFF] w-[355px] h-[120px] absolute left-0 top-[719px] overflow-hidden">
+                  <div className="flex p-[15px] flex-col items-start shrink-0 w-[345px] h-[120px] overflow-hidden">
+                    <p className="line-clamp-1 overflow-hidden text-[#4A4A4A] text-ellipsis font-gilroyMedium text-[22px] w-full">
+                      Nombre del alimento &#x2F; bebida
+                    </p>
+                    <div className="flex pr-[5px] justify-between items-end flex-wrap w-full overflow-hidden">
+                      <p className="text-[#1E1E1E] font-gilroyBlack text-[26px] w-full h-6">
+                        $0000.00 MXN
+                      </p>
+                    </div>
+                    <div className="inline-grid pt-2.5 bg-[#FFF] w-full relative">
+                      <div className="inline-flex min-w-[70px] py-0.5 px-[15px] items-center rounded-[5px] border border-[#6F6F6F] absolute left-0 top-3.5">
+                        <p className="text-[#6F6F6F] font-gilroyRegular text-base absolute left-[15px] top-0.5">
+                          Eliminar
+                        </p>
+                      </div>
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-[30px] h-[30px] absolute left-[180px] top-2.5 "
+                      >
+                        <path
+                          d="M3.33333 26.6667H5.70833L22 10.375L19.625 8L3.33333 24.2917V26.6667ZM0 30V22.9167L22 0.958333C22.3333 0.652778 22.7014 0.416667 23.1042 0.25C23.5069 0.0833333 23.9306 0 24.375 0C24.8194 0 25.25 0.0833333 25.6667 0.25C26.0833 0.416667 26.4444 0.666667 26.75 1L29.0417 3.33333C29.375 3.63889 29.6181 4 29.7708 4.41667C29.9236 4.83333 30 5.25 30 5.66667C30 6.11111 29.9236 6.53472 29.7708 6.9375C29.6181 7.34028 29.375 7.70833 29.0417 8.04167L7.08333 30H0ZM20.7917 9.20833L19.625 8L22 10.375L20.7917 9.20833Z"
+                          fill="#DA0433"
+                        />
+                      </svg>
+                      <div className="inline-flex justify-center items-start bg-[#FFF] absolute left-[220px] top-2.5 overflow-hidden">
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-0 top-0 overflow-hidden">
+                          <p className="flex flex-col justify-center text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            -
+                          </p>
+                        </div>
+                        <div className="grid border-t-2 border-t-[#6F6F6F] border-b-2 border-b-[#6F6F6F] w-[35px] h-[30px] absolute left-[30px] top-0 overflow-hidden">
+                          <p className="text-[#2F2F2F] font-gilroyBold text-2xl leading-[35px] w-[35px] h-[30px] text-center">
+                            0
+                          </p>
+                        </div>
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-[65px] top-0 overflow-hidden">
+                          <p className="text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            +
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex py-0 px-[5px] justify-center items-center border border-[#D9D9D9] bg-[#FFF] w-[355px] h-[120px] absolute left-0 top-[480px] overflow-hidden">
+                  <div className="flex p-[15px] flex-col items-start shrink-0 w-[345px] h-[120px] overflow-hidden">
+                    <p className="line-clamp-1 overflow-hidden text-[#4A4A4A] text-ellipsis font-gilroyMedium text-[22px] w-full">
+                      Nombre del alimento &#x2F; bebida
+                    </p>
+                    <div className="flex pr-[5px] justify-between items-end flex-wrap w-full overflow-hidden">
+                      <p className="text-[#1E1E1E] font-gilroyBlack text-[26px] w-full h-6">
+                        $0000.00 MXN
+                      </p>
+                    </div>
+                    <div className="inline-grid pt-2.5 bg-[#FFF] w-full relative">
+                      <div className="inline-flex min-w-[70px] py-0.5 px-[15px] items-center rounded-[5px] border border-[#6F6F6F] absolute left-0 top-3.5">
+                        <p className="text-[#6F6F6F] font-gilroyRegular text-base absolute left-[15px] top-0.5">
+                          Eliminar
+                        </p>
+                      </div>
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-[30px] h-[30px] absolute left-[180px] top-2.5 "
+                      >
+                        <path
+                          d="M3.33333 26.6667H5.70833L22 10.375L19.625 8L3.33333 24.2917V26.6667ZM0 30V22.9167L22 0.958333C22.3333 0.652778 22.7014 0.416667 23.1042 0.25C23.5069 0.0833333 23.9306 0 24.375 0C24.8194 0 25.25 0.0833333 25.6667 0.25C26.0833 0.416667 26.4444 0.666667 26.75 1L29.0417 3.33333C29.375 3.63889 29.6181 4 29.7708 4.41667C29.9236 4.83333 30 5.25 30 5.66667C30 6.11111 29.9236 6.53472 29.7708 6.9375C29.6181 7.34028 29.375 7.70833 29.0417 8.04167L7.08333 30H0ZM20.7917 9.20833L19.625 8L22 10.375L20.7917 9.20833Z"
+                          fill="#DA0433"
+                        />
+                      </svg>
+                      <div className="inline-flex justify-center items-start bg-[#FFF] absolute left-[220px] top-2.5 overflow-hidden">
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-0 top-0 overflow-hidden">
+                          <p className="flex flex-col justify-center text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            -
+                          </p>
+                        </div>
+                        <div className="grid border-t-2 border-t-[#6F6F6F] border-b-2 border-b-[#6F6F6F] w-[35px] h-[30px] absolute left-[30px] top-0 overflow-hidden">
+                          <p className="text-[#2F2F2F] font-gilroyBold text-2xl leading-[35px] w-[35px] h-[30px] text-center">
+                            0
+                          </p>
+                        </div>
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-[65px] top-0 overflow-hidden">
+                          <p className="text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            +
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex py-0 px-[5px] justify-center items-center border border-[#D9D9D9] bg-[#FFF] w-[355px] h-[120px] absolute left-0 top-[360px] overflow-hidden">
+                  <div className="flex p-[15px] flex-col items-start shrink-0 w-[345px] h-[120px] overflow-hidden">
+                    <p className="line-clamp-1 overflow-hidden text-[#4A4A4A] text-ellipsis font-gilroyMedium text-[22px] w-full">
+                      Nombre del alimento &#x2F; bebida
+                    </p>
+                    <div className="flex pr-[5px] justify-between items-end flex-wrap w-full overflow-hidden">
+                      <p className="text-[#1E1E1E] font-gilroyBlack text-[26px] w-full h-6">
+                        $0000.00 MXN
+                      </p>
+                    </div>
+                    <div className="inline-grid pt-2.5 bg-[#FFF] w-full relative">
+                      <div className="inline-flex min-w-[70px] py-0.5 px-[15px] items-center rounded-[5px] border border-[#6F6F6F] absolute left-0 top-3.5">
+                        <p className="text-[#6F6F6F] font-gilroyRegular text-base absolute left-[15px] top-0.5">
+                          Eliminar
+                        </p>
+                      </div>
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-[30px] h-[30px] absolute left-[180px] top-2.5 "
+                      >
+                        <path
+                          d="M3.33333 26.6667H5.70833L22 10.375L19.625 8L3.33333 24.2917V26.6667ZM0 30V22.9167L22 0.958333C22.3333 0.652778 22.7014 0.416667 23.1042 0.25C23.5069 0.0833333 23.9306 0 24.375 0C24.8194 0 25.25 0.0833333 25.6667 0.25C26.0833 0.416667 26.4444 0.666667 26.75 1L29.0417 3.33333C29.375 3.63889 29.6181 4 29.7708 4.41667C29.9236 4.83333 30 5.25 30 5.66667C30 6.11111 29.9236 6.53472 29.7708 6.9375C29.6181 7.34028 29.375 7.70833 29.0417 8.04167L7.08333 30H0ZM20.7917 9.20833L19.625 8L22 10.375L20.7917 9.20833Z"
+                          fill="#DA0433"
+                        />
+                      </svg>
+                      <div className="inline-flex justify-center items-start bg-[#FFF] absolute left-[220px] top-2.5 overflow-hidden">
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-0 top-0 overflow-hidden">
+                          <p className="flex flex-col justify-center text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            -
+                          </p>
+                        </div>
+                        <div className="grid border-t-2 border-t-[#6F6F6F] border-b-2 border-b-[#6F6F6F] w-[35px] h-[30px] absolute left-[30px] top-0 overflow-hidden">
+                          <p className="text-[#2F2F2F] font-gilroyBold text-2xl leading-[35px] w-[35px] h-[30px] text-center">
+                            0
+                          </p>
+                        </div>
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-[65px] top-0 overflow-hidden">
+                          <p className="text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            +
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex py-0 px-[5px] justify-center items-center border border-[#D9D9D9] bg-[#FFF] w-[355px] h-[120px] absolute left-0 top-60 overflow-hidden">
+                  <div className="flex p-[15px] flex-col items-start shrink-0 w-[345px] h-[120px] overflow-hidden">
+                    <p className="line-clamp-1 overflow-hidden text-[#4A4A4A] text-ellipsis font-gilroyMedium text-[22px] w-full">
+                      Nombre del alimento &#x2F; bebida
+                    </p>
+                    <div className="flex pr-[5px] justify-between items-end flex-wrap w-full overflow-hidden">
+                      <p className="text-[#1E1E1E] font-gilroyBlack text-[26px] w-full h-6">
+                        $0000.00 MXN
+                      </p>
+                    </div>
+                    <div className="inline-grid pt-2.5 bg-[#FFF] w-full relative">
+                      <div className="inline-flex min-w-[70px] py-0.5 px-[15px] items-center rounded-[5px] border border-[#6F6F6F] absolute left-0 top-3.5">
+                        <p className="text-[#6F6F6F] font-gilroyRegular text-base absolute left-[15px] top-0.5">
+                          Eliminar
+                        </p>
+                      </div>
+                      <div className="inline-flex justify-center items-start bg-[#FFF] absolute left-[220px] top-2.5 overflow-hidden">
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-0 top-0 overflow-hidden">
+                          <p className="flex flex-col justify-center text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            -
+                          </p>
+                        </div>
+                        <div className="grid border-t-2 border-t-[#6F6F6F] border-b-2 border-b-[#6F6F6F] w-[35px] h-[30px] absolute left-[30px] top-0 overflow-hidden">
+                          <p className="text-[#2F2F2F] font-gilroyBold text-2xl leading-[35px] w-[35px] h-[30px] text-center">
+                            0
+                          </p>
+                        </div>
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-[65px] top-0 overflow-hidden">
+                          <p className="text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            +
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex py-0 px-[5px] justify-center items-center border border-[#D9D9D9] bg-[#FFF] w-[355px] h-[120px] absolute left-0 top-[120px] overflow-hidden">
+                  <div className="flex p-[15px] flex-col items-start shrink-0 w-[345px] h-[120px] overflow-hidden">
+                    <p className="line-clamp-1 overflow-hidden text-[#4A4A4A] text-ellipsis font-gilroyMedium text-[22px] w-full">
+                      Nombre del alimento &#x2F; bebida
+                    </p>
+                    <div className="flex pr-[5px] justify-between items-end flex-wrap w-full overflow-hidden">
+                      <p className="text-[#1E1E1E] font-gilroyBlack text-[26px] w-full h-6">
+                        $0000.00 MXN
+                      </p>
+                    </div>
+                    <div className="inline-grid pt-2.5 bg-[#FFF] w-full relative">
+                      <div className="inline-flex min-w-[70px] py-0.5 px-[15px] items-center rounded-[5px] border border-[#6F6F6F] absolute left-0 top-3.5">
+                        <p className="text-[#6F6F6F] font-gilroyRegular text-base absolute left-[15px] top-0.5">
+                          Eliminar
+                        </p>
+                      </div>
+                      <div className="inline-flex justify-center items-start bg-[#FFF] absolute left-[220px] top-2.5 overflow-hidden">
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-0 top-0 overflow-hidden">
+                          <p className="flex flex-col justify-center text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            -
+                          </p>
+                        </div>
+                        <div className="grid border-t-2 border-t-[#6F6F6F] border-b-2 border-b-[#6F6F6F] w-[35px] h-[30px] absolute left-[30px] top-0 overflow-hidden">
+                          <p className="text-[#2F2F2F] font-gilroyBold text-2xl leading-[35px] w-[35px] h-[30px] text-center">
+                            0
+                          </p>
+                        </div>
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-[65px] top-0 overflow-hidden">
+                          <p className="text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            +
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex py-0 px-[5px] justify-center items-center border border-[#D9D9D9] bg-[#FFF] w-[355px] h-[120px] absolute left-0 top-0 overflow-hidden">
+                  <div className="flex p-[15px] flex-col items-start shrink-0 w-[345px] h-[120px] overflow-hidden">
+                    <p className="line-clamp-1 overflow-hidden text-[#4A4A4A] text-ellipsis font-gilroyMedium text-[22px] w-full">
+                      Nombre del alimento &#x2F; bebida
+                    </p>
+                    <div className="flex pr-[5px] justify-between items-end flex-wrap w-full overflow-hidden">
+                      <p className="text-[#1E1E1E] font-gilroyBlack text-[26px] w-full h-6">
+                        $89.00 MXN
+                      </p>
+                    </div>
+                    <div className="inline-grid pt-2.5 bg-[#FFF] w-full relative">
+                      <div className="inline-flex min-w-[70px] py-0.5 px-[15px] items-center rounded-[5px] border border-[#6F6F6F] absolute left-0 top-3.5">
+                        <p className="text-[#6F6F6F] font-gilroyRegular text-base absolute left-[15px] top-0.5">
+                          c&#x2F;u $89.00 MXN
+                        </p>
+                      </div>
+                      <div className="inline-flex justify-center items-start bg-[#FFF] absolute left-[220px] top-2.5 overflow-hidden">
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-0 top-0 overflow-hidden">
+                          <p className="flex flex-col justify-center text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            -
+                          </p>
+                        </div>
+                        <div className="grid border-t-2 border-t-[#6F6F6F] border-b-2 border-b-[#6F6F6F] w-[35px] h-[30px] absolute left-[30px] top-0 overflow-hidden">
+                          <p className="text-[#2F2F2F] font-gilroyBold text-2xl leading-[35px] w-[35px] h-[30px] text-center">
+                            0
+                          </p>
+                        </div>
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-[65px] top-0 overflow-hidden">
+                          <p className="text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            +
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="shrink-0 w-[15px] h-[418px] relative">
+                <div className="bg-[#D9D9D9] w-[25px] h-[418px] absolute left-0 top-0"></div>
+                <svg
+                  width="20"
+                  height="55"
+                  viewBox="0 0 20 55"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-[25px] h-[50px] absolute left-0 top-[368px] "
+                >
+                  <g filter="url(#filter0_d_274_412)">
+                    <g filter="url(#filter1_d_274_412)">
+                      <rect x="5" y="4" width="25" height="50" fill="#ECECEC" />
+                    </g>
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_d_274_412"
+                      x="0"
+                      y="0"
+                      width="33"
+                      height="59"
+                      filterUnits="userSpaceOnUse"
+                      colorInterpolationFilters="sRGB"
+                    >
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix
+                        in="SourceAlpha"
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha"
+                      />
+                      <feOffset dx="-1" />
+                      <feGaussianBlur stdDeviation="2" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in2="BackgroundImageFix"
+                        result="effect1_dropShadow_274_412"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect1_dropShadow_274_412"
+                        result="shape"
+                      />
+                    </filter>
+                    <filter
+                      id="filter1_d_274_412"
+                      x="5"
+                      y="4"
+                      width="33"
+                      height="58"
+                      filterUnits="userSpaceOnUse"
+                      colorInterpolationFilters="sRGB"
+                    >
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix
+                        in="SourceAlpha"
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha"
+                      />
+                      <feOffset dx="4" dy="4" />
+                      <feGaussianBlur stdDeviation="2" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in2="BackgroundImageFix"
+                        result="effect1_dropShadow_274_412"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect1_dropShadow_274_412"
+                        result="shape"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div className="flex p-5 flex-col justify-between items-center shrink-0 rounded-[35px] bg-[#FFF] shadow-[4px4px4px0rgba(0,0,0,0.25)] w-full h-[150px] overflow-hidden">
+            <div className="flex py-0 px-[5px] items-start gap-[25px] w-full h-full overflow-hidden">
+              <div className="flex flex-col justify-center items-start gap-[5px] w-full h-full overflow-hidden">
+                <p className="text-[#2F2F2F] font-gilroyBold text-xl w-full">
+                  Saldo Prepago
+                </p>
+                <div className="bg-[#D9D9D9] w-full"></div>
+                <p className="text-[#1E1E1E] font-gilroyBold text-[32px] w-full">
+                  $9999.00 MXN
+                </p>
+              </div>
+              <div className="flex flex-col items-start gap-[5px] w-full h-full overflow-hidden">
+                <p className="text-[#1E1E1E] font-gilroyBold text-xl w-full">
+                  Mi Monedero
+                </p>
+                <div className="bg-[#D9D9D9] w-full"></div>
+                <p className="text-[#1E1E1E] font-gilroyBold text-[32px] w-full">
+                  $9999.00 MXN
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="w-[86px] h-[86px] absolute left-[358px] top-2.5 overflow-hidden">
+          <svg
+            width="51"
+            height="43"
+            viewBox="0 0 51 43"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-[50px] h-[43px] absolute left-[18px] top-[22px] "
+          >
+            <path
+              d="M21.5 43L0 21.5L21.5 0L26.5167 5.01667L10.1229 21.5L26.5167 37.9833L21.5 43ZM45.15 43L23.65 21.5L45.15 0L50.1667 5.01667L33.7729 21.5L50.1667 37.9833L45.15 43Z"
+              fill="white"
+            />
+          </svg>
+          <div className="w-[86px] h-[881px] absolute left-[86px] top-[89px] overflow-hidden"></div>
+        </div>
+      </div>
+      <div className="bg-linear-[180deg,#CC081A0%,#D9043350%,#E7004C100%] w-[100px] h-[1024px] absolute left-5 top-5 overflow-hidden">
+        <img
+          src="/Imagen16(2).png"
+          className="w-12 h-12 absolute left-[25px] top-[951px] max-w-none"
+          alt="imagen 16"
+        />
+        <div className="w-[86px] h-[86px] absolute left-[94px] top-24 overflow-hidden">
+          <svg
+            width="51"
+            height="43"
+            viewBox="0 0 51 43"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-[50px] h-[43px] absolute left-[18px] top-[22px] "
+          >
+            <path
+              d="M28.6667 0L50.1667 21.5L28.6667 43L23.6501 37.9833L40.0438 21.5L23.6501 5.01667L28.6667 0ZM5.01675 0L26.5167 21.5L5.01675 43L8.39233e-05 37.9833L16.3938 21.5L8.39233e-05 5.01667L5.01675 0Z"
+              fill="white"
+            />
+          </svg>
+          <div className="w-[86px] h-[881px] absolute left-[86px] top-[89px] overflow-hidden"></div>
+        </div>
+      </div>
+      <div className="bg-linear-[180deg,#CC081A0%,#D9043350%,#E7004C100%] w-[100px] h-[1024px] absolute left-5 top-[1114px] overflow-hidden">
+        <img
+          src="/Imagen16(3).png"
+          className="w-12 h-12 absolute left-[25px] top-[951px] max-w-none"
+          alt="imagen 16"
+        />
+        <div className="w-[86px] h-[86px] absolute left-[94px] top-24 overflow-hidden">
+          <svg
+            width="51"
+            height="43"
+            viewBox="0 0 51 43"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-[50px] h-[43px] absolute left-[18px] top-[22px] "
+          >
+            <path
+              d="M28.6667 0L50.1667 21.5L28.6667 43L23.6501 37.9833L40.0438 21.5L23.6501 5.01667L28.6667 0ZM5.01675 0L26.5167 21.5L5.01675 43L8.39233e-05 37.9833L16.3938 21.5L8.39233e-05 5.01667L5.01675 0Z"
+              fill="white"
+            />
+          </svg>
+          <div className="w-[86px] h-[881px] absolute left-[86px] top-[89px] overflow-hidden"></div>
+        </div>
+      </div>
+      <div className="bg-linear-[180deg,#CC081A0%,#D9043350%,#E7004C100%] w-[450px] h-[1024px] absolute left-[178px] top-[1111px] overflow-hidden">
+        <img
+          src="/Imagen16(4).png"
+          className="w-[299px] h-[52px] absolute left-[75px] top-[948px] max-w-none"
+          alt="imagen 16"
+        />
+        <img
+          src="/Imagen17(2).png"
+          className="w-12 h-12 absolute left-[77px] top-[950px] max-w-none"
+          alt="imagen 17"
+        />
+        <img
+          src="/Imagen18(2).png"
+          className="w-12 h-12 absolute left-[77px] top-[950px] max-w-none"
+          alt="imagen 18"
+        />
+        <div className="grid pt-[30px] pr-[100px] pb-5 pl-[50px] w-[450px] h-24 absolute -left-px top-0 overflow-hidden">
+          <p className="flex flex-col justify-center text-[#FFF] font-gilroyBlack text-[40px] w-[300px] h-full">
+            Mi pedido
+          </p>
+        </div>
+        <div className="flex max-w-[450px] pt-2.5 pr-10 pb-[35px] pl-10 flex-col items-start gap-10 w-[450px] h-[852px] absolute left-0 top-24 overflow-hidden">
+          <div className="inline-grid rounded-[25px] bg-[#FFF] shadow-[4px4px4px0rgba(0,0,0,0.25)] h-full overflow-hidden relative">
+            <div className="flex py-5 px-[25px] flex-col justify-center items-end gap-[15px] bg-[#6F6F6F] shadow-[006px2pxrgba(0,0,0,0.25)] w-[370px] h-full absolute left-0 top-[418px] overflow-hidden">
+              <div className="flex flex-col items-start -space-y-[5px] w-full overflow-hidden">
+                <p className="text-[#FFF] font-gilroyBold text-[32px] w-full text-right">
+                  Total:
+                </p>
+                <p className="flex flex-col justify-center text-[#FFF] font-gilroyBold text-[40px] w-full h-[45px] text-right">
+                  $89.00 MXN
+                </p>
+              </div>
+              <div className="inline-grid w-full relative">
+                <div className="flex min-w-[70px] py-2.5 px-[15px] items-start rounded-[10px] bg-[#FFF] shadow-[4px4px4px0rgba(0,0,0,0.25)] w-full absolute left-[168px] top-0 overflow-hidden">
+                  <p className="flex flex-col justify-center text-[#6F6F6F] font-gilroyBold text-[28px] w-full h-full text-center">
+                    Pagar
+                  </p>
+                </div>
+                <div className="flex min-w-[70px] py-2.5 px-[15px] items-start rounded-[10px] border-[3px] border-[rgba(255,255,255,0.95)] shadow-[4px4px4px0rgba(0,0,0,0.25)] w-full absolute left-0 top-0 overflow-hidden">
+                  <p className="flex flex-col justify-center text-[rgba(255,255,255,0.95)] font-gilroyBold text-[28px] w-full h-[35px] text-center">
+                    Cancelar
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col justify-end items-center absolute w-[370px] h-[418px] absolute left-0 top-0 overflow-hidden">
+              <div className="flex pb-[601px] flex-col items-start w-[370px] h-[841px]">
+                <div className="flex pt-0 pr-[13px] pb-0 pl-3 justify-center items-center border border-[#D9D9D9] bg-[#FFF] w-[370px] h-[120px] overflow-hidden">
+                  <div className="flex p-[15px] flex-col items-start shrink-0 w-[345px] h-[120px] overflow-hidden">
+                    <p className="line-clamp-1 overflow-hidden text-[#4A4A4A] text-ellipsis font-gilroyMedium text-[22px] w-full">
+                      Nombre del alimento &#x2F; bebida
+                    </p>
+                    <div className="flex pr-[5px] justify-between items-end flex-wrap w-full overflow-hidden">
+                      <p className="text-[#1E1E1E] font-gilroyBlack text-[26px] w-full h-6">
+                        $0000.00 MXN
+                      </p>
+                    </div>
+                    <div className="inline-grid pt-2.5 bg-[#FFF] w-full relative">
+                      <div className="inline-flex min-w-[70px] py-0.5 px-[15px] items-center rounded-[5px] border border-[#6F6F6F] absolute left-0 top-3.5">
+                        <p className="text-[#6F6F6F] font-gilroyRegular text-base absolute left-[15px] top-0.5">
+                          Eliminar
+                        </p>
+                      </div>
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-[30px] h-[30px] absolute left-[180px] top-2.5 "
+                      >
+                        <path
+                          d="M3.33333 26.6667H5.70833L22 10.375L19.625 8L3.33333 24.2917V26.6667ZM0 30V22.9167L22 0.958333C22.3333 0.652778 22.7014 0.416667 23.1042 0.25C23.5069 0.0833333 23.9306 0 24.375 0C24.8194 0 25.25 0.0833333 25.6667 0.25C26.0833 0.416667 26.4444 0.666667 26.75 1L29.0417 3.33333C29.375 3.63889 29.6181 4 29.7708 4.41667C29.9236 4.83333 30 5.25 30 5.66667C30 6.11111 29.9236 6.53472 29.7708 6.9375C29.6181 7.34028 29.375 7.70833 29.0417 8.04167L7.08333 30H0ZM20.7917 9.20833L19.625 8L22 10.375L20.7917 9.20833Z"
+                          fill="#DA0433"
+                        />
+                      </svg>
+                      <div className="inline-flex justify-center items-start bg-[#FFF] absolute left-[220px] top-2.5 overflow-hidden">
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-0 top-0 overflow-hidden">
+                          <p className="flex flex-col justify-center text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            -
+                          </p>
+                        </div>
+                        <div className="grid border-t-2 border-t-[#6F6F6F] border-b-2 border-b-[#6F6F6F] w-[35px] h-[30px] absolute left-[30px] top-0 overflow-hidden">
+                          <p className="text-[#2F2F2F] font-gilroyBold text-2xl leading-[35px] w-[35px] h-[30px] text-center">
+                            0
+                          </p>
+                        </div>
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-[65px] top-0 overflow-hidden">
+                          <p className="text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            +
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex pt-0 pr-[13px] pb-0 pl-3 justify-center items-center border border-[#D9D9D9] bg-[#FFF] w-[370px] h-[120px] overflow-hidden">
+                  <div className="flex p-[15px] flex-col items-start shrink-0 w-[345px] h-[120px] overflow-hidden">
+                    <p className="line-clamp-1 overflow-hidden text-[#4A4A4A] text-ellipsis font-gilroyMedium text-[22px] w-full">
+                      Nombre del alimento &#x2F; bebida
+                    </p>
+                    <div className="flex pr-[5px] justify-between items-end flex-wrap w-full overflow-hidden">
+                      <p className="text-[#1E1E1E] font-gilroyBlack text-[26px] w-full h-6">
+                        $89.00 MXN
+                      </p>
+                    </div>
+                    <div className="inline-grid pt-2.5 bg-[#FFF] w-full relative">
+                      <div className="inline-flex min-w-[70px] py-0.5 px-[15px] items-center rounded-[5px] border border-[#6F6F6F] absolute left-0 top-3.5">
+                        <p className="text-[#6F6F6F] font-gilroyRegular text-base absolute left-[15px] top-0.5">
+                          Eliminar Producto
+                        </p>
+                      </div>
+                      <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-[30px] h-[30px] absolute left-[180px] top-2.5 "
+                      >
+                        <path
+                          d="M3.33333 26.6667H5.70833L22 10.375L19.625 8L3.33333 24.2917V26.6667ZM0 30V22.9167L22 0.958333C22.3333 0.652778 22.7014 0.416667 23.1042 0.25C23.5069 0.0833333 23.9306 0 24.375 0C24.8194 0 25.25 0.0833333 25.6667 0.25C26.0833 0.416667 26.4444 0.666667 26.75 1L29.0417 3.33333C29.375 3.63889 29.6181 4 29.7708 4.41667C29.9236 4.83333 30 5.25 30 5.66667C30 6.11111 29.9236 6.53472 29.7708 6.9375C29.6181 7.34028 29.375 7.70833 29.0417 8.04167L7.08333 30H0ZM20.7917 9.20833L19.625 8L22 10.375L20.7917 9.20833Z"
+                          fill="#DA0433"
+                        />
+                      </svg>
+                      <div className="inline-flex justify-center items-start bg-[#FFF] absolute left-[220px] top-2.5 overflow-hidden">
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-0 top-0 overflow-hidden">
+                          <p className="flex flex-col justify-center text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            -
+                          </p>
+                        </div>
+                        <div className="grid border-t-2 border-t-[#6F6F6F] border-b-2 border-b-[#6F6F6F] w-[35px] h-[30px] absolute left-[30px] top-0 overflow-hidden">
+                          <p className="text-[#2F2F2F] font-gilroyBold text-2xl leading-[35px] w-[35px] h-[30px] text-center">
+                            0
+                          </p>
+                        </div>
+                        <div className="grid border-2 border-[#6F6F6F] w-[30px] h-[30px] absolute left-[65px] top-0 overflow-hidden">
+                          <p className="text-[#6F6F6F] font-gilroyBlack text-[26px] w-[30px] h-[30px] text-center">
+                            +
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex py-0 px-5 flex-col justify-between items-center shrink-0 rounded-[35px] shadow-[4px4px4px0rgba(0,0,0,0.25)] w-full h-[150px] overflow-hidden">
+            <div className="flex py-0 px-[5px] items-start w-full h-full overflow-hidden">
+              <div className="flex flex-col items-start gap-2.5 w-full h-full overflow-hidden">
+                <p className="text-[#ECECEC] font-gilroyBold text-[32px] w-full text-center">
+                  ¡Inicia sesión para acceder a tu saldo!
+                </p>
+                <div className="inline-grid w-full relative">
+                  <div className="flex min-w-[70px] py-2.5 px-[15px] items-start rounded-[10px] bg-[#FFF] shadow-[4px4px4px0rgba(0,0,0,0.25)] w-full absolute left-0 top-0 overflow-hidden">
+                    <p className="flex flex-col justify-center text-[#6F6F6F] font-gilroyBold text-[28px] w-full h-full text-center">
+                      Acceder con mi app
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="w-[86px] h-[86px] absolute left-[358px] top-2.5 overflow-hidden">
+          <svg
+            width="51"
+            height="43"
+            viewBox="0 0 51 43"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-[50px] h-[43px] absolute left-[18px] top-[22px] "
+          >
+            <path
+              d="M21.5 43L0 21.5L21.5 0L26.5167 5.01667L10.1229 21.5L26.5167 37.9833L21.5 43ZM45.15 43L23.65 21.5L45.15 0L50.1667 5.01667L33.7729 21.5L50.1667 37.9833L45.15 43Z"
+              fill="white"
+            />
+          </svg>
+          <div className="w-[86px] h-[881px] absolute left-[86px] top-[89px] overflow-hidden"></div>
+        </div>
+      </div>
+    </div>
+  );
+}
