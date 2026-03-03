@@ -12,26 +12,26 @@ function PiePagina() {
           <h2>Recursos</h2>
 
           <ul className="listaRecursos">
-            <li><a href="#">Preguntas Frecuentes</a></li>
-            <li><a href="#">Sustentabilidad</a></li>
-            <li><a href="#">Aviso de Privacidad</a></li>
-            <li><a href="#">Atención a Clientes</a></li>
+            <li><Link to="#">Preguntas Frecuentes</Link></li>
+            <li><Link to="#">Sustentabilidad</Link></li>
+            <li><Link to="#">Aviso de Privacidad</Link></li>
+            <li><Link to="#">Atención a Clientes</Link></li>
           </ul>
         </div>
 
         <div className="columnaPiePagina">
           <h2>Categorías</h2>
           <div>
-            <a href="#">Camisas</a>
-            <a href="#">Playeras</a>
-            <a href="#">Sudaderas</a>
-            <a href="#">Calzado</a>
-            <a href="#">Accesorios</a>
-            <a href="#">Pantalones</a>
-            <a href="#">Faldas</a>
-            <a href="#">Vestidos</a>
-            <a href="#">Chamarras</a>
-            <a href="#">Otros</a>
+            <Link to="#">Camisas</Link>
+            <Link to="#">Playeras</Link>
+            <Link to="#">Sudaderas</Link>
+            <Link to="#">Calzado</Link>
+            <Link to="#">Accesorios</Link>
+            <Link to="#">Pantalones</Link>
+            <Link to="#">Faldas</Link>
+            <Link to="#">Vestidos</Link>
+            <Link to="#">Chamarras</Link>
+            <Link to="#">Otros</Link>
           </div>
         </div>
 
@@ -48,63 +48,63 @@ function PiePagina() {
 
       <div className="footerFilas">
         <div className="filaRedesSociales">
-          <a href="#">
+          <Link to="#">
             <i className="fa-brands fa-instagram footerIcons"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <i className="fa-brands fa-tiktok footerIcons"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <i className="fa-brands fa-facebook footerIcons"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <i className="fa-brands fa-threads footerIcons"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <i className="fa-brands fa-reddit footerIcons"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <i className="fa-brands fa-bilibili footerIcons"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <i className="fa-brands fa-pinterest footerIcons"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <i className="fa-brands fa-tumblr footerIcons"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <i className="fa-brands fa-node footerIcons"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <i className="fa-brands fa-github footerIcons"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <i className="fa-brands fa-linkedin footerIcons"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <i className="fa-brands fa-steam footerIcons"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <i className="fa-brands fa-twitch footerIcons"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <i className="fa-brands fa-x-twitter footerIcons"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <i className="fa-brands fa-vk footerIcons"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <i className="fa-brands fa-whatsapp footerIcons"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <i className="fa-brands fa-blogger footerIcons"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <i className="fa-brands fa-battle-net footerIcons"></i>
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <i className="fa-brands fa-wikipedia-w footerIcons"></i>
-          </a>
+          </Link>
 
 
         </div>
