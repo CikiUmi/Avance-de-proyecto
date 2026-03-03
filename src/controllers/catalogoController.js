@@ -17,12 +17,33 @@ exports.createProducto = async (req, res) => {
 // READ
 /* Todos */
 exports.getCatalogo = async (req, res) => {
+
+    let { page, pageSize } = req.query;
+
   try {
-    const catalogoProductos = await Catalogo.find();
-    res.status(200).json(catalogoProductos);
+    // Pagina y Tamaño de Página se establecen en 1 y 20 automáticamente
+    page = parseInt(page, 10) || 1;
+    pageSize = parseInt(pageSize, 10) || 20;
+
+    const catalogoProductos = await Catalogo.aggregate([
+      {
+        $facet: {
+          metadata: [{ $count: 'totalCount' }],
+          data: [{ $skip: (page - 1) * pageSize }, { $limit: pageSize }],
+        },
+      },
+    ]);
+
+    return res.status(200).json({
+      success: true,
+      articles: {
+        metadata: { totalCount: catalogoProductos[0].metadata[0].totalCount, page, pageSize },
+        data: catalogoProductos[0].data,
+      },
+    });
   } catch (error) {
-    res.status(400).json({ mensaje: 'Error al obtener catálogo: ', error });
-  }
+    return res.status(500).json({ mensaje: 'Error al obtener catálogo: ', error });
+  }  
 };
 
 /* Uno */
