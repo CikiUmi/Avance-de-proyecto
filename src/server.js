@@ -32,6 +32,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'pages', 'index.html'));
 });
 
+const climaRoutes = require("./routes/climaRoutes");
+app.use("/api", climaRoutes);
+
+
 if (process.env.NODE_ENV !== 'test') {
   app.listen(PORT, () => {
     console.log(`Servidor escuchando en http://localhost:${PORT}`);
