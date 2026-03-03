@@ -12,27 +12,26 @@ function RutaProtegida({ children }) {
   return token ? children : <Navigate to="/" />;
 }
 
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Rutas públicas */}
-        <Route path="/"           element={<Inicio />} />
-        <Route path="/catalogo"   element={<Catalogo />} />
+        {/* Pública — página de inicio con login */}
+        <Route path="/"                element={<Inicio />} />
 
-        {/* Ruta dinámica — :id cambia según el producto */}
-        <Route path="/producto/:id" element={<Producto />} />
+        {/* Pública — el catálogo se puede ver sin login */}
+        <Route path="/catalogo"        element={<Catalogo />} />
 
-        {/* Rutas protegidas — requieren login */}
-        <Route path="/cuenta" element={
-          <RutaProtegida>
-            <MiCuenta />
-          </RutaProtegida>
-        } />
+        {/* Dinámica — detalle de un producto por su ID */}
+        <Route path="/producto/:id"    element={<Producto />} />
+
+        {/* Protegidas — requieren token */}
         <Route path="/carrito" element={
-          <RutaProtegida>
-            <Carrito />
-          </RutaProtegida>
+          <RutaProtegida><Carrito /></RutaProtegida>
+        } />
+        <Route path="/cuenta" element={
+          <RutaProtegida><MiCuenta /></RutaProtegida>
         } />
       </Routes>
     </BrowserRouter>
