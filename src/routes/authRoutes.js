@@ -7,7 +7,11 @@ const router = express.Router();
 
 // Helper: generar token
 const generateToken = (user) => {
-  const payload = { id: user._id };
+  const payload = {
+    id: user._id,
+    name: user.nombre,
+    role: user.rol
+  };
   const expiresIn = process.env.TOKEN_EXPIRES_IN;
   return jwt.sign(payload, process.env.JWT_SECRET, { expiresIn });
 };

@@ -74,6 +74,8 @@ estructura del sitio web en formato .html.
 ***= styles =***
 .css para la página.
 
+***= resources =***
+archivos (como fotos, audio) para la página
 
 ### **src:**
 Backend y lógica de la página. Base de datos, conexiones y configuraciones. server.js
@@ -85,10 +87,10 @@ Configuración de la base de datos (Mongo)
 CRUD de la base de datos.
 
 ***= models =***
-Schemas (DB).
+estructura de las colecciones (DB).
 
 ***= routes =***
-Rutas de API.
+Rutas de la API.
 
 ***= middlewares =***
 Jsonwebtoken, rutas protegidas.
