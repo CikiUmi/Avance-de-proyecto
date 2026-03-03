@@ -65,7 +65,7 @@ function FormLogin({ onCerrar, onIrRegistro, navigate }) {
 
     if (ok) {
       onCerrar();
-      navigate('/catalogo'); // redirige al catálogo tras login exitoso
+      navigate('/cuenta'); // redirige al catálogo tras login exitoso
     } else {
       // Mostrar el error que manda el backend
       const msg = data.message || 'Credenciales inválidas';

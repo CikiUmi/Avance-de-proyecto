@@ -21,17 +21,14 @@ function Navbar({ onAbrirLogin }) {
 
       <nav>
       <Link to="/catalogo" className = "navBarTitles">Catálogo</Link>
-      <Link to="#" className = "navBarTitles">Sobre nosotros</Link>
 
-          {logueado && (
             <Link to="/carrito">
               <i className="material-icons" id="iconoCarrito">shopping_cart</i>
               <span className="badge">0</span>
             </Link>
-          )}
 
           {logueado ? (
-            <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <span style={{ gap: '8px' }}>
               <Link to="/cuenta">
                 <i className="material-icons" id="iconoUser">person</i>
               </Link>

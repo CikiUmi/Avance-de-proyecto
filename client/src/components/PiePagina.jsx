@@ -22,7 +22,7 @@ function PiePagina() {
 
         <div className="columnaPiePagina">
           <h2>Categorías</h2>
-          <div>
+          <div className="categoriasTexto">
             <Link to="#">Camisas</Link>
             <Link to="#">Playeras</Link>
             <Link to="#">Sudaderas</Link>
