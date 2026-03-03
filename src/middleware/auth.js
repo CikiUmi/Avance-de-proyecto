@@ -8,9 +8,9 @@ const auth = (req, res, next) => {
   try {
     const payload = jwt.verify(token, process.env.JWT_SECRET);
     // payload puede contener { id: ..., iat: ..., exp: ... }
-    req.user = { id: payload.id };
+    req.user = { id: payload.id,
+      role: payload.role };
     next();
-    const userRole = decoded.role;
 
   } catch (err) {
     return res.status(401).json({ message: 'El Token es inválido o ya expiró.' });
@@ -18,7 +18,3 @@ const auth = (req, res, next) => {
 };
 
 module.exports = auth;
-
-if (userRole){
-  module.exports = userRole;
-}

@@ -2,16 +2,16 @@
 function PiePagina() {
   return (
     <footer>
-      <div class="piePagina">
-        <div class="columnaPiePagina" id="primerColumnaFooter">
-          <h2 class="logo">Sir Lucxs StudiO</h2>
-          <p class="slogan">Proyecto para Desarrollo Fullstack</p>
+      <div className="piePagina">
+        <div className="columnaPiePagina" id="primerColumnaFooter">
+          <h2 className="logo">Sir Lucxs StudiO</h2>
+          <p className="slogan">Proyecto para Desarrollo Fullstack</p>
         </div>
 
-        <div class="columnaPiePagina">
+        <div className="columnaPiePagina">
           <h2>Recursos</h2>
 
-          <ul class="listaRecursos">
+          <ul className="listaRecursos">
             <li><a href="#">Preguntas Frecuentes</a></li>
             <li><a href="#">Sustentabilidad</a></li>
             <li><a href="#">Aviso de Privacidad</a></li>
@@ -19,7 +19,7 @@ function PiePagina() {
           </ul>
         </div>
 
-        <div class="columnaPiePagina">
+        <div className="columnaPiePagina">
           <h2>Categorías</h2>
           <div>
             <a href="#">Camisas</a>
@@ -35,75 +35,75 @@ function PiePagina() {
           </div>
         </div>
 
-        <div class="columnaPiePagina" id="ultimaColumnaFooter">
+        <div className="columnaPiePagina" id="ultimaColumnaFooter">
           <h2>Contacto</h2>
-          <div class="newsletterPie">
-            <input class="input-correo" type="email" placeholder="Correo" />
-            <button class="button-contacto" type="submit">Enviar</button>
+          <div className="newsletterPie">
+            <input className="input-correo" type="email" placeholder="Correo" />
+            <button className="button-contacto" type="submit">Enviar</button>
           </div>
           <p>¡Suscríbete para recibir nuestras actualizaciones!</p>
 
         </div>
       </div >
 
-      <div class="footerFilas">
-        <div class="filaRedesSociales">
+      <div className="footerFilas">
+        <div className="filaRedesSociales">
           <a href="#">
-            <i class="fa-brands fa-instagram footerIcons"></i>
+            <i className="fa-brands fa-instagram footerIcons"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-tiktok footerIcons"></i>
+            <i className="fa-brands fa-tiktok footerIcons"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-facebook footerIcons"></i>
+            <i className="fa-brands fa-facebook footerIcons"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-threads footerIcons"></i>
+            <i className="fa-brands fa-threads footerIcons"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-reddit footerIcons"></i>
+            <i className="fa-brands fa-reddit footerIcons"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-bilibili footerIcons"></i>
+            <i className="fa-brands fa-bilibili footerIcons"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-pinterest footerIcons"></i>
+            <i className="fa-brands fa-pinterest footerIcons"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-tumblr footerIcons"></i>
+            <i className="fa-brands fa-tumblr footerIcons"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-node footerIcons"></i>
+            <i className="fa-brands fa-node footerIcons"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-github footerIcons"></i>
+            <i className="fa-brands fa-github footerIcons"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-linkedin footerIcons"></i>
+            <i className="fa-brands fa-linkedin footerIcons"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-steam footerIcons"></i>
+            <i className="fa-brands fa-steam footerIcons"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-twitch footerIcons"></i>
+            <i className="fa-brands fa-twitch footerIcons"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-x-twitter footerIcons"></i>
+            <i className="fa-brands fa-x-twitter footerIcons"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-vk footerIcons"></i>
+            <i className="fa-brands fa-vk footerIcons"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-whatsapp footerIcons"></i>
+            <i className="fa-brands fa-whatsapp footerIcons"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-blogger footerIcons"></i>
+            <i className="fa-brands fa-blogger footerIcons"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-battle-net footerIcons"></i>
+            <i className="fa-brands fa-battle-net footerIcons"></i>
           </a>
           <a href="#">
-            <i class="fa-brands fa-wikipedia-w footerIcons"></i>
+            <i className="fa-brands fa-wikipedia-w footerIcons"></i>
           </a>
 
 
