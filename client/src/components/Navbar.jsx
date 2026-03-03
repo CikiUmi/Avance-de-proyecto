@@ -22,7 +22,6 @@ function Navbar({ onAbrirLogin }) {
       <nav>
       <Link to="/catalogo" className = "navBarTitles">Catálogo</Link>
       <Link to="#" className = "navBarTitles">Sobre nosotros</Link>
-      <Link to="#" className = "navBarTitles">Catálogo</Link>
 
           {logueado && (
             <Link to="/carrito">
@@ -31,7 +30,6 @@ function Navbar({ onAbrirLogin }) {
             </Link>
           )}
 
-          /* Ícono de usuario */
           {logueado ? (
             <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <Link to="/cuenta">

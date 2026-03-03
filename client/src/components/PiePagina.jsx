@@ -1,4 +1,5 @@
 // PiePagina.jsx
+import { Link } from 'react-router-dom';
 function PiePagina() {
   return (
     <footer>

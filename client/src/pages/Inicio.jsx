@@ -11,7 +11,7 @@ function Inicio() {
 
   // Si ya está logueado, ir directo al catálogo
   if (localStorage.getItem('token')) {
-    navigate('/');
+    navigate('/catalogo');
     return null;
   }
 
