@@ -66,7 +66,7 @@ exports.updateProductosCarrito = async (req, res) => {
     if (productoExistente) {
       productoExistente.cantidad += cantidad;
       productoExistente.subtotal =
-        productoExistente.cantidad * productoExistente.costoUnitario;
+        productoExistente.cantidad * costoUnitario;
     } else {
       carrito.productos.push({
         producto,

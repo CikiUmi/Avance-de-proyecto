@@ -21,7 +21,8 @@ app.use('/api/catalogo', require('./routes/catalogoRoutes'));
 app.use('/api/pedido', require('./routes/pedidoRoutes'));
 app.use('/api/cuentaUsuario', require('./routes/cuentaUsuarioRoutes'));
 app.use('/api/carrito', require('./routes/carritoRoutes'));
-const authMiddleware = require('./middleware/auth');
+/* const authMiddleware = require('./middleware/auth'); */
+
 
 // Servir archivos estáticos de public/
 app.use(express.static(path.join(__dirname, '..', 'public')));
