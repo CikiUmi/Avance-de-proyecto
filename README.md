@@ -66,17 +66,20 @@ librerías y dependencias instaladas para el proyecto.
 ### **public:**
 Frontend de la página. Estructuras, estilos, etc.
 
-***= app =***
-archivos .js para las páginas.
+***= componente =***
+archivos .jsx para su uso en páginas.
 
 ***= pages =***
-estructura del sitio web en formato .html.
-
-***= styles =***
-.css para la página.
+estructura del sitio web en formato .jsx.
 
 ***= resources =***
 archivos (como fotos, audio) para la página
+
+***= services =***
+llamadas usando api.js
+
+***= styles =***
+.css para la página.
 
 ### **src:**
 Backend y lógica de la página. Base de datos, conexiones y configuraciones. server.js
