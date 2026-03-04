@@ -1,12 +1,8 @@
 // client/src/services/api.js
-// Todas las llamadas al backend en un solo lugar
+const BASE = '/api';
 
-const BASE = '/api'; // El proxy de Vite redirige esto a tu backend
-
-// ─── Helper: token guardado ───────────────────
 const getToken = () => localStorage.getItem('token');
 
-// ─── Helper: headers con autenticación ────────
 const authHeaders = () => ({
   'Content-Type': 'application/json',
   Authorization: `Bearer ${getToken()}`
@@ -23,7 +19,7 @@ export const login = async (correo, password) => {
   const data = await res.json();
   if (res.ok) {
     localStorage.setItem('token', data.token);
-    localStorage.setItem('user', JSON.stringify(data.user)); // guardar datos del usuario
+    localStorage.setItem('user', JSON.stringify(data.user));
   }
   return { ok: res.ok, data };
 };
@@ -43,14 +39,21 @@ export const logout = () => {
 };
 
 export const getUsuarioLocal = () => {
-  const user = localStorage.getItem('user');
-  return user ? JSON.parse(user) : null;
+  try {
+    const user = localStorage.getItem('user');
+    return user ? JSON.parse(user) : null;
+  } catch { return null; }
+};
+
+export const esAdmin = () => {
+  const u = getUsuarioLocal();
+  return u?.rol === 'admin';
 };
 
 // ─── CATÁLOGO ──────────────────────────────────
 
-export const getCatalogo = async () => {
-  const res = await fetch(`${BASE}/catalogo`, {
+export const getCatalogo = async (page = 1, pageSize = 20) => {
+  const res = await fetch(`${BASE}/catalogo?page=${page}&pageSize=${pageSize}`, {
     headers: authHeaders()
   });
   return res.json();
@@ -63,13 +66,49 @@ export const getProducto = async (id) => {
   return res.json();
 };
 
+export const createProducto = async (datos) => {
+  const res = await fetch(`${BASE}/catalogo`, {
+    method: 'POST',
+    headers: authHeaders(),
+    body: JSON.stringify(datos)
+  });
+  return { ok: res.ok, data: await res.json() };
+};
+
+export const updateProducto = async (id, datos) => {
+  const res = await fetch(`${BASE}/catalogo/${id}`, {
+    method: 'PUT',
+    headers: authHeaders(),
+    body: JSON.stringify(datos)
+  });
+  return { ok: res.ok, data: await res.json() };
+};
+
+export const deleteProducto = async (id) => {
+  const res = await fetch(`${BASE}/catalogo/${id}`, {
+    method: 'DELETE',
+    headers: authHeaders()
+  });
+  return { ok: res.ok, data: await res.json() };
+};
+
 // ─── CARRITO ───────────────────────────────────
 
 export const getCarrito = async (userID) => {
   const res = await fetch(`${BASE}/carrito/${userID}`, {
     headers: authHeaders()
   });
+  if (res.status === 404) return null;
   return res.json();
+};
+
+export const crearCarrito = async (usuario) => {
+  const res = await fetch(`${BASE}/carrito`, {
+    method: 'POST',
+    headers: authHeaders(),
+    body: JSON.stringify({ usuario })
+  });
+  return { ok: res.ok, data: await res.json() };
 };
 
 export const addAlCarrito = async (userID, item) => {
@@ -78,7 +117,16 @@ export const addAlCarrito = async (userID, item) => {
     headers: authHeaders(),
     body: JSON.stringify(item)
   });
-  return res.json();
+  return { ok: res.ok, data: await res.json() };
+};
+
+export const updateCarrito = async (userID, productos) => {
+  const res = await fetch(`${BASE}/carrito/${userID}`, {
+    method: 'PUT',
+    headers: authHeaders(),
+    body: JSON.stringify({ productos })
+  });
+  return { ok: res.ok, data: await res.json() };
 };
 
 export const vaciarCarrito = async (userID) => {
@@ -86,7 +134,7 @@ export const vaciarCarrito = async (userID) => {
     method: 'DELETE',
     headers: authHeaders()
   });
-  return res.json();
+  return { ok: res.ok, data: await res.json() };
 };
 
 // ─── PEDIDOS ───────────────────────────────────
@@ -97,7 +145,7 @@ export const crearPedido = async (userID, metodoPago) => {
     headers: authHeaders(),
     body: JSON.stringify({ metodoPago })
   });
-  return res.json();
+  return { ok: res.ok, data: await res.json() };
 };
 
 export const getPedidos = async () => {
@@ -121,6 +169,15 @@ export const updateCuenta = async (id, datos) => {
     method: 'PUT',
     headers: authHeaders(),
     body: JSON.stringify(datos)
+  });
+  return { ok: res.ok, data: await res.json() };
+};
+
+// ─── CLIMA ─────────────────────────────────────
+
+export const getRecomendacionClima = async (ciudad) => {
+  const res = await fetch(`${BASE}/clima/recomendacion?ciudad=${encodeURIComponent(ciudad)}`, {
+    headers: authHeaders()
   });
   return res.json();
 };
