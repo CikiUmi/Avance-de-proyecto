@@ -21,6 +21,7 @@ function Navbar({ onAbrirLogin }) {
 
       <nav>
       <Link to="/catalogo" className = "navBarTitles">Catálogo</Link>
+      <Link to="#" className = "navBarTitles">Sobre Nosotros</Link>
 
             <Link to="/carrito">
               <i className="material-icons" id="iconoCarrito">shopping_cart</i>
@@ -28,7 +29,7 @@ function Navbar({ onAbrirLogin }) {
             </Link>
 
           {logueado ? (
-            <span style={{ gap: '8px' }}>
+            <span>
               <Link to="/cuenta">
                 <i className="material-icons" id="iconoUser">person</i>
               </Link>
@@ -55,7 +56,6 @@ function Navbar({ onAbrirLogin }) {
                 border: 'none',
                 color: 'var(--color-text-main)',
                 cursor: 'pointer',
-                marginLeft: '20px'
               }}
             >
               <i className="material-icons" id="iconoUser">person</i>

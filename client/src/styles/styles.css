@@ -222,9 +222,10 @@ input {
 }
 
 .categoriasTexto {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .2em .5em;
   /* Crea dos columnas de igual tamaño */
-  grid-template-columns: 1fr 1fr 1fr;   /* Espacio entre filas (10px) y columnas (20px) */
   /* Asegura que los enlaces no tengan subrayado y sean blancos */
   max-width: 300px; /* Ajusta este ancho según tu diseño */
 }
@@ -426,7 +427,6 @@ input {
 
   .wrapper-button {
     flex-direction: column;
-    /* botones uno abajo del otro */
   }
 
   .log-button {

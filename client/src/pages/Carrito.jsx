@@ -13,7 +13,7 @@ function Carrito() {
   return (
     <>
       <Navbar onAbrirLogin={() => setDialogAbierto(true)} />
-  <h1 style={{ padding: '40px', color: 'var(--blanco)' }}>Carrito — próximamente</h1>;
+        
 
       <PiePagina />
     </>
