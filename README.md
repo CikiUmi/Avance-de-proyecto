@@ -4,8 +4,8 @@
 > Este proyecto es una tienda en línea de ropa, una página web desarrollada con MongoDB, Express, React y Node.js (¡MERN!). En la carpeta de 'entregables' hay una demostración de cómo funciona la página cuando las variables de ambiente tienen los datos necesarios.
 
 > [!NOTE]
-> Nuestra página web: [sir-lucxs-studio.vercel.app](https://sir-lucxs-studio.vercel.app)
-Para que esto funcionara, se hizo un despliegue del backend en Render, conectamos el repositorio y añadimos las mismas variables de entorno que en vercel. :D
+> Nuestra página web: [sir-lucxs-studio.vercel.app](https://sir-lucxs-studio.vercel.app) y un [video de demostración](https://youtu.be/5zQ-C6D4bf0).
+Para que esto funcionara, se hizo un despliegue del backend en Render, conectamos el repositorio y añadimos las mismas variables de entorno que en vercel. :D 
 
 - - - - - - - - - - - - - - - - - - - - - 
 
