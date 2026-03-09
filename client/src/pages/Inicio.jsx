@@ -4,26 +4,28 @@ import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import PiePagina from '../components/PiePagina';
 import LoginDialog from '../components/LoginDialog';
+import slide1 from '../assets/images/slide1.jpg';
+import slide2 from '../assets/images/slide2.jpg';
+import slide3 from '../assets/images/slide3.jpg';
 
 const SLIDES = [
   {
-    img: '/resources/slide1.jpg',
+    img: slide1,
     titulo: 'Sir LucXs StudiO',
     subtitulo: 'Viste con estilo, viste Sir Lucas',
   },
   {
-    img: '/resources/slide2.jpg',
+    img: slide2,
     titulo: 'Colección Verano 2026',
     subtitulo: 'Fresco, cómodo y vibrante',
   },
   {
-    img: '/resources/slide3.jpg',
+    img: slide3,
     titulo: 'Nueva tecnología de manufactura',
     subtitulo: 'Calidad, comodidad y sustentabilidad',
   },
 ];
 
-// ── Carrusel propio (sin dependencias externas) ──
 function Carrusel({ onAbrirLogin }) {
   const [actual, setActual] = useState(0);
   const timer = useRef(null);
