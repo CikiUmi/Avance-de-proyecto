@@ -1,5 +1,10 @@
 // client/src/services/api.js
-const BASE = '/api';
+
+// En desarrollo, Vite proxy redirige /api → localhost:3000
+// En producción (Vercel), llamamos directamente al backend en Render
+const BASE = import.meta.env.VITE_BACKEND_URL
+  ? `${import.meta.env.VITE_BACKEND_URL}/api`
+  : '/api';
 
 const getToken = () => localStorage.getItem('token');
 
@@ -50,19 +55,15 @@ export const esAdmin = () => {
   return u?.rol === 'admin';
 };
 
-// ─── CATÁLOGO ──────────────────────────────────
+// ─── CATÁLOGO (público) ────────────────────────
 
 export const getCatalogo = async (page = 1, pageSize = 20) => {
-  const res = await fetch(`${BASE}/catalogo?page=${page}&pageSize=${pageSize}`, {
-    headers: authHeaders()
-  });
+  const res = await fetch(`${BASE}/catalogo?page=${page}&pageSize=${pageSize}`);
   return res.json();
 };
 
 export const getProducto = async (id) => {
-  const res = await fetch(`${BASE}/catalogo/${id}`, {
-    headers: authHeaders()
-  });
+  const res = await fetch(`${BASE}/catalogo/${id}`);
   return res.json();
 };
 
