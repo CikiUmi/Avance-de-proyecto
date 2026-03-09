@@ -5,6 +5,8 @@ import Navbar from '../components/Navbar';
 import PiePagina from '../components/PiePagina';
 import LoginDialog from '../components/LoginDialog';
 import { getCatalogo, getCarrito, esAdmin, createProducto, getUsuarioLocal } from '../services/api';
+import placeholder from '../assets/images/placeholder.png';
+
 
 const CATEGORIAS = ['Camisa','Playera','Sudadera','Calzado','Accesorio','Pantalón','Falda','Vestido','Chamarra','Otro'];
 const TALLAS = ['XS','S','M','L','XL','XXL','U'];
@@ -151,7 +153,7 @@ function DialogCrearProducto({ onCerrar, onCreado }) {
 
 // ── Tarjeta de producto ──
 function TarjetaProducto({ producto }) {
-  const imagenPrincipal = producto.stock?.[0]?.imagen || '/resources/placeholder.jpg';
+  const imagenPrincipal = producto.stock?.[0]?.imagen;
   return (
     <Link to={`/producto/${producto._id}`} className="tarjeta-producto">
       <div className="tarjeta-img-wrapper">
