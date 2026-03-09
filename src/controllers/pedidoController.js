@@ -1,5 +1,7 @@
 const Pedido = require('../models/Pedido');
 const Carrito = require('../models/Carrito')
+const Catalogo = require('../models/Catalogo')
+
 // CREAR
 //sacar el total, borrar el carrito
 exports.createPedido = async (req, res) => {
