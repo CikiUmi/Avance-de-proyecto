@@ -1,14 +1,10 @@
 // client/src/pages/Inicio.jsx
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Navbar from '../components/Navbar';
 import PiePagina from '../components/PiePagina';
 import LoginDialog from '../components/LoginDialog';
 
-// Imágenes del carrusel — usa tus propias imágenes en /public/resources/
-// o urls externas si no tienes las locales todavía
 const SLIDES = [
   {
     img: '/resources/slide1.jpg',
@@ -27,64 +23,103 @@ const SLIDES = [
   },
 ];
 
+// ── Carrusel propio (sin dependencias externas) ──
+function Carrusel({ onAbrirLogin }) {
+  const [actual, setActual] = useState(0);
+  const timer = useRef(null);
+
+  const siguiente = () => setActual(a => (a + 1) % SLIDES.length);
+  const anterior  = () => setActual(a => (a - 1 + SLIDES.length) % SLIDES.length);
+
+  useEffect(() => {
+    timer.current = setInterval(siguiente, 5000);
+    return () => clearInterval(timer.current);
+  }, []);
+
+  const reiniciar = () => {
+    clearInterval(timer.current);
+    timer.current = setInterval(siguiente, 5000);
+  };
+
+  const irA = (i) => { setActual(i); reiniciar(); };
+
+  return (
+    <section className="hero-carousel">
+      <div className="slide-wrapper">
+        {SLIDES.map((slide, i) => (
+          <div
+            key={i}
+            className="slide-item"
+            style={{ opacity: i === actual ? 1 : 0, transition: 'opacity 0.8s ease' }}
+          >
+            <img src={slide.img} alt={slide.titulo} className="slide-img" />
+          </div>
+        ))}
+
+        {/* Overlay con texto encima */}
+        <div className="slide-overlay">
+          <h1 className="slide-titulo logo">{SLIDES[actual].titulo}</h1>
+          <p className="slide-subtitulo">{SLIDES[actual].subtitulo}</p>
+          <div className="slide-botones">
+            <button className="log-button blanco-button" onClick={onAbrirLogin}>
+              Iniciar sesión
+            </button>
+            <button
+              className="log-button"
+              style={{ border: '1px solid var(--blanco)' }}
+              onClick={onAbrirLogin}
+            >
+              Registrarse
+            </button>
+          </div>
+        </div>
+
+        {/* Flechas */}
+        <button className="slide-arrow slide-arrow-left" onClick={() => { anterior(); reiniciar(); }}>
+          ‹
+        </button>
+        <button className="slide-arrow slide-arrow-right" onClick={() => { siguiente(); reiniciar(); }}>
+          ›
+        </button>
+
+        {/* Dots */}
+        <div className="slide-dots">
+          {SLIDES.map((_, i) => (
+            <button
+              key={i}
+              className={`slide-dot ${i === actual ? 'activo' : ''}`}
+              onClick={() => irA(i)}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Inicio() {
   const [dialogAbierto, setDialogAbierto] = useState(false);
   const navigate = useNavigate();
 
-  if (localStorage.getItem('token')) {
-    navigate('/catalogo');
-    return null;
-  }
+  useEffect(() => {
+    if (localStorage.getItem('token')) {
+      navigate('/catalogo');
+    }
+  }, []);
 
   return (
     <>
       <Navbar onAbrirLogin={() => setDialogAbierto(true)} />
 
-      {/* ── Carrusel hero ── */}
-      <section className="hero-carousel">
-        <Carousel
-          autoPlay
-          infiniteLoop
-          showThumbs={false}
-          showStatus={false}
-          interval={5000}
-          transitionTime={700}
-        >
-          {SLIDES.map((slide, i) => (
-            <div key={i} className="slide-wrapper">
-              <img src={slide.img} alt={slide.titulo} className="slide-img" />
-              <div className="slide-overlay">
-                <h1 className="slide-titulo logo">{slide.titulo}</h1>
-                <p className="slide-subtitulo">{slide.subtitulo}</p>
-                <div className="slide-botones">
-                  <button
-                    className="log-button blanco-button"
-                    onClick={() => setDialogAbierto(true)}
-                  >
-                    Iniciar sesión
-                  </button>
-                  <button
-                    className="log-button"
-                    style={{ border: '1px solid var(--blanco)' }}
-                    onClick={() => setDialogAbierto(true)}
-                  >
-                    Registrarse
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </Carousel>
-      </section>
+      <Carrusel onAbrirLogin={() => setDialogAbierto(true)} />
 
       {/* ── Sección info ── */}
       <section className="inicio-info">
         <div className="inicio-info-bloque">
           <h2>Conoce nuestra nueva tecnología de manufactura</h2>
           <p>
-            Sir Lucas Studio está siempre a la vanguardia y por eso nos emociona presentar
-            nuestra nueva tecnología de manufactura de ropa. Diseñada para ofrecerte prendas
-            de alta calidad, cómodas y sostenibles.
+            Sir Lucas Studio está siempre a la vanguardia. Nuestra nueva tecnología
+            de manufactura ofrece prendas de alta calidad, cómodas y sostenibles.
           </p>
           <button
             className="log-button blanco-button"
@@ -95,9 +130,9 @@ function Inicio() {
           </button>
         </div>
 
-        <div className="inicio-info-bloque inicio-coleccion">
+        <div className="inicio-info-bloque">
           <h2>Colección Verano 2026</h2>
-          <p style={{ color: 'var(--muted)', marginBottom: '12px' }}>
+          <p style={{ color: 'var(--muted)' }}>
             El calor está llegando y nosotros estamos listos. Inspirada en los colores
             vibrantes de la naturaleza, esta colección es perfecta para quienes buscan
             algo fresco y cómodo.
@@ -105,38 +140,27 @@ function Inicio() {
         </div>
       </section>
 
-      {/* ── Mapa sucursal ── */}
+      {/* ── Sucursal ── */}
       <section className="inicio-sucursal">
         <div className="sucursal-mapa">
           <iframe
             title="Sucursal Sir Lucas Studio"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.4!2d-99.601!3d19.291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDE3JzI3LjYiTiA5OcKwMzYnMDMuNiJX!5e0!3m2!1ses!2smx!4v1"
-            width="100%"
-            height="300"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.0!2d-99.601!3d19.291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTk!5e0!3m2!1ses!2smx!4v1"
+            width="100%" height="300"
             style={{ border: 0, borderRadius: 'var(--radius-big)' }}
-            allowFullScreen
-            loading="lazy"
+            allowFullScreen loading="lazy"
           />
         </div>
         <div className="sucursal-info">
           <h2>Sucursal física</h2>
-          <p>
-            Calle Guadalupe Victoria 221, Las Jaras, San Jorge Pueblo Nuevo, Méx., México.
-          </p>
+          <p>Calle Guadalupe Victoria 221, Las Jaras, San Jorge Pueblo Nuevo, Méx., México.</p>
           <p style={{ marginTop: '12px', color: 'var(--muted)', fontSize: '0.95rem' }}>
             Todos los pedidos se recogen en mostrador. No contamos con servicio de paquetería.
-          </p>
-          <p style={{ marginTop: '8px', color: 'var(--muted)', fontSize: '0.95rem' }}>
-            También contamos con venta por mayoreo y menudeo.
           </p>
         </div>
       </section>
 
-      <LoginDialog
-        abierto={dialogAbierto}
-        onCerrar={() => setDialogAbierto(false)}
-      />
-
+      <LoginDialog abierto={dialogAbierto} onCerrar={() => setDialogAbierto(false)} />
       <PiePagina />
     </>
   );

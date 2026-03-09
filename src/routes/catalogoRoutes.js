@@ -10,10 +10,13 @@ const {
   deleteProducto
 } = require('../controllers/catalogoController');
 
-router.post('/', auth, createProducto);   /* Crear */
-router.get('/', auth, getCatalogo);      /* Leer todos */
-router.get('/:id', auth, getProducto);      /* Leer uno */
-router.put('/:id', auth, updateProducto);      /* Actualizar */
-router.delete('/:id', auth, deleteProducto);      /* Eliminar uno */
+// Rutas PÚBLICAS — no requieren token
+router.get('/', getCatalogo);        /* Ver catálogo */
+router.get('/:id', getProducto);     /* Ver producto individual */
+
+// Rutas PROTEGIDAS — solo admin
+router.post('/', auth, createProducto);
+router.put('/:id', auth, updateProducto);
+router.delete('/:id', auth, deleteProducto);
 
 module.exports = router;
